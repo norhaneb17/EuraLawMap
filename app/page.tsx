@@ -45,7 +45,7 @@ export default function HomePage() {
           </div>
           <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl">
             Le droit européen du numérique,{" "}
-            <span className="text-gold-400">cartographié</span>
+            <span className="text-gold-400">simplifié</span>
           </h1>
           <p className="text-navy-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
             DSA, DMA, AI Act, RGPD, DGA et plus — des fiches de synthèse, un glossaire juridique
