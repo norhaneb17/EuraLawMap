@@ -362,7 +362,7 @@ export function getChaptersBySlug(slug: string): Chapter[] {
 }
 
 export const mockStats = {
-  regulations: 8,
-  fiches: 24,
-  concepts: 156,
+  regulations: 15,
+  fiches: 6,
+  concepts: 120,
 };

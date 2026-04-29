@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, FileText, Brain, MessageSquare, Trophy } from "lucide-react";
 import RegulationCard from "@/components/RegulationCard";
-import { mockRegulations, mockStats } from "@/lib/mock-data";
+import { regulationsData } from "@/lib/regulations-data";
+import { mockStats } from "@/lib/mock-data";
 
 const stats = [
   { label: "Règlements", value: mockStats.regulations, icon: BookOpen },
@@ -101,8 +102,8 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {mockRegulations.map((reg) => (
-            <RegulationCard key={reg.slug} regulation={reg} />
+          {regulationsData.slice(0, 8).map((reg) => (
+            <RegulationCard key={reg.id} regulation={reg} />
           ))}
         </div>
       </section>
