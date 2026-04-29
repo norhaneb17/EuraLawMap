@@ -144,7 +144,6 @@ export default function QuizPage() {
           <span className="text-xs font-medium bg-navy-50 text-navy-700 border border-navy-200 px-2 py-0.5 rounded">
             {question.regulation}
           </span>
-          <span className="text-xs text-gray-400">{question.difficulty}</span>
         </div>
 
         <p className="font-serif-display text-lg font-semibold text-navy-900 mb-6 leading-snug">

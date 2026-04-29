@@ -52,11 +52,6 @@ const mockFiches = [
   },
 ];
 
-const difficultyColors: Record<string, string> = {
-  L3: "bg-green-50 text-green-700 border-green-200",
-  M1: "bg-blue-50 text-blue-700 border-blue-200",
-  M2: "bg-purple-50 text-purple-700 border-purple-200",
-};
 
 export default function FichesPage() {
   return (
@@ -66,8 +61,7 @@ export default function FichesPage() {
           Fiches thématiques
         </h1>
         <p className="text-gray-500 max-w-2xl">
-          Des synthèses claires sur les notions-clés du droit européen du numérique,
-          adaptées selon votre niveau d&apos;études.
+          Des synthèses claires sur les notions-clés du droit européen du numérique.
         </p>
       </div>
 
@@ -80,14 +74,9 @@ export default function FichesPage() {
           >
             <div className="flex items-start justify-between gap-3 mb-3">
               <FileText className="w-5 h-5 text-navy-400 flex-shrink-0 mt-0.5" />
-              <div className="flex gap-2 flex-wrap justify-end">
-                <span className={`text-xs font-medium px-2 py-0.5 rounded border ${difficultyColors[fiche.difficulty]}`}>
-                  {fiche.difficulty}
-                </span>
-                <span className="text-xs font-medium px-2 py-0.5 rounded border bg-navy-50 text-navy-700 border-navy-200">
-                  {fiche.regulation}
-                </span>
-              </div>
+              <span className="text-xs font-medium px-2 py-0.5 rounded border bg-navy-50 text-navy-700 border-navy-200">
+                {fiche.regulation}
+              </span>
             </div>
             <h3 className="font-serif-display font-semibold text-navy-900 text-base leading-snug mb-2 flex-1">
               {fiche.title}

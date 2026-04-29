@@ -89,7 +89,7 @@ export default function HomePage() {
               {
                 emoji: "📄",
                 title: "Fiches thématiques",
-                desc: "Des fiches de synthèse sur les notions clés, organisées par niveau (L3, M1, M2) et par thème.",
+                desc: "Des fiches de synthèse sur les notions clés du droit européen du numérique, organisées par thème.",
                 href: "/fiches",
                 cta: "Parcourir les fiches",
               },

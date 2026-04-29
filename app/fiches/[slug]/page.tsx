@@ -2,11 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Tag, BookOpen, Scale, AlertTriangle, CheckCircle } from "lucide-react";
 
-const difficultyColors: Record<string, string> = {
-  L3: "bg-green-50 text-green-700 border-green-200",
-  M1: "bg-blue-50 text-blue-700 border-blue-200",
-  M2: "bg-purple-50 text-purple-700 border-purple-200",
-};
 
 const fichesData: Record<string, {
   slug: string;
@@ -374,9 +369,6 @@ export default function FichePage({ params }: { params: { slug: string } }) {
       {/* Header */}
       <div className="mb-8">
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className={`text-xs font-semibold px-2.5 py-1 rounded border ${difficultyColors[fiche.difficulty]}`}>
-            Niveau {fiche.difficulty}
-          </span>
           <span className="text-xs font-semibold px-2.5 py-1 rounded border bg-navy-50 text-navy-700 border-navy-200">
             {fiche.regulation}
           </span>
