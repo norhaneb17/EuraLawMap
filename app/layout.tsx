@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "EuralawMap — Droit européen du numérique",
+  title: "EuraLexMap — Droit européen du numérique",
   description:
     "Cartographiez le droit européen du numérique : DSA, DMA, AI Act, RGPD, DGA et plus. Fiches, glossaire et assistant IA pour étudiants en droit.",
 };

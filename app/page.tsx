@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, FileText, Brain } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Brain, Scale, MessageSquare, Trophy } from "lucide-react";
 import RegulationCard from "@/components/RegulationCard";
-import SearchBar from "@/components/SearchBar";
 import { mockRegulations, mockStats } from "@/lib/mock-data";
 
 const stats = [
@@ -10,119 +9,132 @@ const stats = [
   { label: "Concepts définis", value: mockStats.concepts, icon: Brain },
 ];
 
+const features = [
+  {
+    icon: FileText,
+    title: "Fiches thématiques",
+    desc: "Des synthèses claires sur les notions-clés du droit européen du numérique, organisées par thème.",
+    href: "/fiches",
+    cta: "Parcourir les fiches",
+  },
+  {
+    icon: MessageSquare,
+    title: "Assistant IA",
+    desc: "Posez vos questions à un assistant spécialisé en droit européen du numérique, disponible 24h/24.",
+    href: "/assistant",
+    cta: "Interroger l'assistant",
+  },
+  {
+    icon: Trophy,
+    title: "Quiz d'auto-évaluation",
+    desc: "Testez vos connaissances sur chaque règlement avec des quiz interactifs et des explications détaillées.",
+    href: "/quiz",
+    cta: "Commencer un quiz",
+  },
+];
+
 export default function HomePage() {
   return (
-    <div>
+    <div className="bg-white">
       {/* Hero */}
-      <section className="bg-navy-950 text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-navy-800 text-gold-400 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-navy-700">
-            <span className="w-1.5 h-1.5 bg-gold-400 rounded-full"></span>
-            Droit européen du numérique
+      <section className="relative bg-navy-950 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-navy-800 via-navy-950 to-navy-950 opacity-60" />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 bg-gold-500 rounded-lg flex items-center justify-center shadow-lg">
+              <Scale className="w-5 h-5 text-navy-950" />
+            </div>
+            <span className="text-gold-400 text-sm font-semibold tracking-widest uppercase">EuraLexMap</span>
           </div>
-          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Comprendre les règlements<br />
-            <span className="text-gold-400">européens du numérique</span>
+          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl">
+            Le droit européen du numérique,{" "}
+            <span className="text-gold-400">cartographié</span>
           </h1>
-          <p className="text-navy-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-            DSA, DMA, AI Act, RGPD, DGA et plus — expliqués clairement pour les étudiants en droit,
-            avec fiches de synthèse, glossaire et assistant IA.
+          <p className="text-navy-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
+            DSA, DMA, AI Act, RGPD, DGA et plus — des fiches de synthèse, un glossaire juridique
+            et un assistant IA pour maîtriser les textes européens.
           </p>
-
-          {/* Search */}
-          <div className="max-w-xl mx-auto">
-            <SearchBar fullWidth />
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/reglements"
+              className="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-6 py-3 rounded-lg transition-colors text-sm shadow-lg"
+            >
+              Explorer les règlements
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/fiches"
+              className="inline-flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-white font-medium px-6 py-3 rounded-lg transition-colors text-sm border border-navy-700"
+            >
+              Lire les fiches
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="bg-navy-900 border-b border-navy-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 divide-x divide-navy-800">
+      <section className="border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 divide-x divide-gray-100">
             {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center py-6">
-                <stat.icon className="w-5 h-5 text-gold-400 mb-2" />
-                <span className="font-serif-display text-2xl font-bold text-white">{stat.value}</span>
-                <span className="text-xs text-navy-400 mt-0.5">{stat.label}</span>
+              <div key={stat.label} className="flex flex-col items-center py-8 gap-1">
+                <stat.icon className="w-5 h-5 text-gold-500 mb-1" />
+                <span className="font-serif-display text-3xl font-bold text-navy-950">{stat.value}</span>
+                <span className="text-xs text-gray-400 font-medium">{stat.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Regulations grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex items-center justify-between mb-8">
+      {/* Regulations */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="flex items-end justify-between mb-8">
           <div>
+            <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase mb-1">Textes de référence</p>
             <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950">
               Règlements européens
             </h2>
-            <p className="text-gray-500 text-sm mt-1">
-              Cliquez sur un règlement pour accéder à la fiche détaillée
-            </p>
           </div>
           <Link
             href="/reglements"
-            className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-navy-700 hover:text-navy-900 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-navy-600 hover:text-navy-900 transition-colors"
           >
-            Voir tous
-            <ArrowRight className="w-4 h-4" />
+            Voir tous <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {mockRegulations.map((reg) => (
             <RegulationCard key={reg.slug} regulation={reg} />
           ))}
         </div>
       </section>
 
-      {/* CTA Features */}
-      <section className="bg-gray-50 border-y border-gray-200 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950 text-center mb-12">
-            Tout ce dont vous avez besoin pour réviser
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                emoji: "📄",
-                title: "Fiches thématiques",
-                desc: "Des fiches de synthèse sur les notions clés du droit européen du numérique, organisées par thème.",
-                href: "/fiches",
-                cta: "Parcourir les fiches",
-              },
-              {
-                emoji: "🤖",
-                title: "Assistant IA",
-                desc: "Posez vos questions à un assistant spécialisé en droit européen du numérique, disponible 24h/24.",
-                href: "/assistant",
-                cta: "Interroger l'assistant",
-              },
-              {
-                emoji: "🎯",
-                title: "Quiz d'auto-évaluation",
-                desc: "Testez vos connaissances sur chaque règlement avec des quiz générés par IA, avec explications détaillées.",
-                href: "/quiz",
-                cta: "Commencer un quiz",
-              },
-            ].map((feature) => (
+      {/* Features */}
+      <section className="bg-gray-50 border-t border-gray-100 py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase mb-2">Outils</p>
+            <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950">
+              Tout pour comprendre et réviser
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {features.map((f) => (
               <div
-                key={feature.title}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:border-navy-300 hover:shadow-md transition-all"
+                key={f.title}
+                className="bg-white rounded-xl border border-gray-200 p-6 hover:border-navy-300 hover:shadow-md transition-all group"
               >
-                <div className="text-3xl mb-4">{feature.emoji}</div>
-                <h3 className="font-serif-display font-semibold text-navy-900 text-lg mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{feature.desc}</p>
+                <div className="w-10 h-10 bg-navy-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold-50 transition-colors">
+                  <f.icon className="w-5 h-5 text-navy-600 group-hover:text-gold-600 transition-colors" />
+                </div>
+                <h3 className="font-serif-display font-bold text-navy-900 text-base mb-2">{f.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">{f.desc}</p>
                 <Link
-                  href={feature.href}
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-navy-700 hover:text-navy-900 transition-colors"
+                  href={f.href}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700 hover:text-gold-600 transition-colors"
                 >
-                  {feature.cta}
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  {f.cta} <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             ))}

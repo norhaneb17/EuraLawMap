@@ -12,7 +12,7 @@ export default function Footer() {
                 <Scale className="w-3.5 h-3.5 text-navy-950" />
               </div>
               <span className="font-serif-display text-lg font-bold text-white">
-                Euralaw<span className="text-gold-400">Map</span>
+                EuraLex<span className="text-gold-400">Map</span>
               </span>
             </div>
             <p className="text-navy-400 text-sm">
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-navy-800 mt-8 pt-6 text-center text-navy-500 text-xs">
-          © {new Date().getFullYear()} EuralawMap — Plateforme pédagogique, non un avis juridique.
+          © {new Date().getFullYear()} EuraLexMap — Compilation de textes juridiques européens à visée pédagogique. Ne constitue pas un avis juridique.
         </div>
       </div>
     </footer>

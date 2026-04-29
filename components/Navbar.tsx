@@ -27,7 +27,7 @@ export default function Navbar() {
               <Scale className="w-4 h-4 text-navy-950" />
             </div>
             <span className="font-serif-display text-xl font-bold text-white">
-              Euralaw<span className="text-gold-400">Map</span>
+              EuraLex<span className="text-gold-400">Map</span>
             </span>
           </Link>
 
