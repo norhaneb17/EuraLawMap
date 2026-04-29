@@ -21,14 +21,32 @@ export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
 
+    // Validate messages array
+    if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      return NextResponse.json({ error: "Messages array is required and must not be empty" }, { status: 400 });
+    }
+
+    // Ensure valid roles and non-empty content
+    const validMessages = messages
+      .filter((m: { role: string; content: string }) =>
+        (m.role === "user" || m.role === "assistant") && m.content?.trim()
+      )
+      .map((m: { role: string; content: string }) => ({
+        role: m.role as "user" | "assistant",
+        content: m.content,
+      }));
+
+    if (validMessages.length === 0) {
+      return NextResponse.json({ error: "No valid messages found" }, { status: 400 });
+    }
+
+    console.log("Sending to Anthropic:", JSON.stringify({ model: "claude-opus-4-7", messageCount: validMessages.length }));
+
     const response = await client.messages.create({
       model: "claude-opus-4-7",
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
-      messages: messages.map((m: { role: string; content: string }) => ({
-        role: m.role,
-        content: m.content,
-      })),
+      messages: validMessages,
     });
 
     const content = response.content[0];
@@ -37,8 +55,19 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ content: content.text });
-  } catch (error) {
-    console.error("Chat API error:", error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Chat API error message:", error.message);
+      console.error("Chat API error stack:", error.stack);
+      // Log Anthropic-specific error details
+      const anthropicError = error as Error & { status?: number; error?: unknown };
+      if (anthropicError.status) {
+        console.error("Anthropic status:", anthropicError.status);
+        console.error("Anthropic error body:", JSON.stringify(anthropicError.error));
+      }
+    } else {
+      console.error("Chat API unknown error:", error);
+    }
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
