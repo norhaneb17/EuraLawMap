@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
   { href: "/reglements", label: "Règlements" },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggle } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 bg-navy-950 border-b border-navy-800">
@@ -46,6 +48,15 @@ export default function Navbar() {
               );
             })}
           </nav>
+
+          {/* Dark mode toggle */}
+          <button
+            onClick={toggle}
+            className="text-navy-300 hover:text-white transition-colors p-1.5 rounded-lg hover:bg-navy-800"
+            aria-label="Basculer le mode sombre"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
 
           {/* Mobile toggle */}
           <button

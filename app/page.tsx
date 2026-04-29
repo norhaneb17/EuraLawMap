@@ -71,14 +71,14 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="border-b border-gray-100">
+      <section className="border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 divide-x divide-gray-100">
+          <div className="grid grid-cols-3 divide-x divide-gray-100 dark:divide-gray-800">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center py-8 gap-1">
                 <stat.icon className="w-5 h-5 text-gold-500 mb-1" />
-                <span className="font-serif-display text-3xl font-bold text-navy-950">{stat.value}</span>
-                <span className="text-xs text-gray-400 font-medium">{stat.label}</span>
+                <span className="font-serif-display text-3xl font-bold text-navy-950 dark:text-white">{stat.value}</span>
+                <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -90,7 +90,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase mb-1">Textes de référence</p>
-            <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950">
+            <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950 dark:text-white">
               Règlements européens
             </h2>
           </div>
@@ -109,11 +109,11 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="bg-gray-50 border-t border-gray-100 py-16">
+      <section className="bg-gray-50 dark:bg-gray-800/50 border-t border-gray-100 dark:border-gray-800 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase mb-2">Outils</p>
-            <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950">
+            <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950 dark:text-white">
               Tout pour comprendre et réviser
             </h2>
           </div>
@@ -121,13 +121,13 @@ export default function HomePage() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:border-navy-300 hover:shadow-md transition-all group"
+                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:border-navy-300 dark:hover:border-navy-600 hover:shadow-md transition-all group"
               >
-                <div className="w-10 h-10 bg-navy-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold-50 transition-colors">
-                  <f.icon className="w-5 h-5 text-navy-600 group-hover:text-gold-600 transition-colors" />
+                <div className="w-10 h-10 bg-navy-50 dark:bg-navy-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold-50 dark:group-hover:bg-navy-800 transition-colors">
+                  <f.icon className="w-5 h-5 text-navy-600 dark:text-navy-300 group-hover:text-gold-600 transition-colors" />
                 </div>
-                <h3 className="font-serif-display font-bold text-navy-900 text-base mb-2">{f.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{f.desc}</p>
+                <h3 className="font-serif-display font-bold text-navy-900 dark:text-white text-base mb-2">{f.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">{f.desc}</p>
                 <Link
                   href={f.href}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700 hover:text-gold-600 transition-colors"

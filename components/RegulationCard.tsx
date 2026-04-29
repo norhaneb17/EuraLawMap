@@ -24,10 +24,10 @@ export default function RegulationCard({ regulation }: { regulation: RegulationD
 
   return (
     <Link href={`/reglement/${regulation.id}`} className="group block">
-      <div className="h-full bg-white border border-gray-200 rounded-xl p-5 hover:border-navy-400 hover:shadow-md transition-all duration-200 flex flex-col">
+      <div className="h-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 hover:border-navy-400 dark:hover:border-navy-500 hover:shadow-md transition-all duration-200 flex flex-col">
         {/* Badge + cat */}
         <div className="flex items-start justify-between mb-3">
-          <span className="font-mono font-bold text-navy-950 text-sm bg-navy-50 border border-navy-200 px-2 py-0.5 rounded">
+          <span className="font-mono font-bold text-navy-950 dark:text-navy-100 text-sm bg-navy-50 dark:bg-navy-900 border border-navy-200 dark:border-navy-700 px-2 py-0.5 rounded">
             {regulation.badge}
           </span>
           <span className={`text-xs font-medium px-2 py-0.5 rounded border ${catColor}`}>
@@ -36,19 +36,19 @@ export default function RegulationCard({ regulation }: { regulation: RegulationD
         </div>
 
         {/* Name */}
-        <h3 className="font-serif-display font-semibold text-navy-900 text-sm leading-snug mb-1 group-hover:text-navy-700 transition-colors">
+        <h3 className="font-serif-display font-semibold text-navy-900 dark:text-navy-100 text-sm leading-snug mb-1 group-hover:text-navy-700 dark:group-hover:text-white transition-colors">
           {regulation.name}
         </h3>
 
         {/* Ref */}
-        <p className="text-xs text-gray-400 font-mono mb-3 truncate">{regulation.ref}</p>
+        <p className="text-xs text-gray-400 dark:text-gray-500 font-mono mb-3 truncate">{regulation.ref}</p>
 
         {/* Footer */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100 dark:border-gray-700">
           <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${statusColor}`}>
             {regulation.statusLabel}
           </span>
-          <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-navy-700 group-hover:translate-x-0.5 transition-all" />
+          <ArrowRight className="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-navy-700 dark:group-hover:text-navy-300 group-hover:translate-x-0.5 transition-all" />
         </div>
       </div>
     </Link>

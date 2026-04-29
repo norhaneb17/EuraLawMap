@@ -89,7 +89,7 @@ export default function FichesPage() {
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 mb-3">
           Fiches thématiques
         </h1>
-        <p className="text-gray-500 max-w-2xl">
+        <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
           Des synthèses claires sur les notions-clés du droit européen du numérique.
         </p>
       </div>
@@ -104,7 +104,7 @@ export default function FichesPage() {
             placeholder="Rechercher une fiche…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-300 focus:border-navy-300 bg-white"
+            className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-300 focus:border-navy-300 bg-white dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500"
           />
         </div>
 
@@ -117,7 +117,7 @@ export default function FichesPage() {
               className={`text-xs font-medium px-3 py-1.5 rounded-full border transition-colors ${
                 activeReg === reg
                   ? "bg-navy-950 text-white border-navy-950"
-                  : "bg-white text-gray-600 border-gray-200 hover:border-navy-400 hover:text-navy-700"
+                  : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-navy-400 hover:text-navy-700"
               }`}
             >
               {reg}
@@ -127,13 +127,13 @@ export default function FichesPage() {
       </div>
 
       {/* Count */}
-      <p className="text-xs text-gray-400 mb-6">
+      <p className="text-xs text-gray-400 dark:text-gray-500 mb-6">
         {filtered.length} fiche{filtered.length !== 1 ? "s" : ""} affichée{filtered.length !== 1 ? "s" : ""}
       </p>
 
       {/* Grid */}
       {filtered.length === 0 ? (
-        <div className="text-center py-16 text-gray-400">
+        <div className="text-center py-16 text-gray-400 dark:text-gray-500">
           <FileText className="w-8 h-8 mx-auto mb-3 opacity-40" />
           <p className="text-sm">Aucune fiche ne correspond à votre recherche.</p>
         </div>
@@ -143,12 +143,12 @@ export default function FichesPage() {
             <Link
               key={fiche.slug}
               href={`/fiches/${fiche.slug}`}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:border-navy-400 hover:shadow-md transition-all flex flex-col group"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-navy-400 dark:hover:border-navy-500 hover:shadow-md transition-all flex flex-col group"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
                 <FileText className="w-5 h-5 text-navy-400 flex-shrink-0 mt-0.5" />
                 <div className="flex gap-1.5">
-                  <span className="text-xs font-medium px-2 py-0.5 rounded border bg-navy-50 text-navy-700 border-navy-200">
+                  <span className="text-xs font-medium px-2 py-0.5 rounded border bg-navy-50 dark:bg-navy-900 text-navy-700 dark:text-navy-300 border-navy-200 dark:border-navy-700">
                     {fiche.regulation}
                   </span>
                   {fiche.cat && (
@@ -158,19 +158,19 @@ export default function FichesPage() {
                   )}
                 </div>
               </div>
-              <h3 className="font-serif-display font-semibold text-navy-900 text-base leading-snug mb-2 flex-1">
+              <h3 className="font-serif-display font-semibold text-navy-900 dark:text-navy-100 text-base leading-snug mb-2 flex-1">
                 {fiche.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">{fiche.excerpt}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">{fiche.excerpt}</p>
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {fiche.tags.map((tag) => (
-                  <span key={tag} className="inline-flex items-center gap-1 text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
+                  <span key={tag} className="inline-flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded">
                     <Tag className="w-2.5 h-2.5" />
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className="mt-auto pt-3 border-t border-gray-100">
+              <div className="mt-auto pt-3 border-t border-gray-100 dark:border-gray-700">
                 <span className="text-xs text-gold-600 font-medium group-hover:underline">Lire la fiche →</span>
               </div>
             </Link>

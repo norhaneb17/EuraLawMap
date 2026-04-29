@@ -20,6 +20,7 @@ export interface RegulationData {
   articulations: string;
   timeline: { date: string; event: string }[];
   link: string;
+  updatedAt: string; // ISO date string, e.g. "2025-04-29"
 }
 
 export const regulationsData: RegulationData[] = [
@@ -71,6 +72,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2025", event: "Année record de sanctions : 478 M€ en France" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679",
+    updatedAt: "2025-04-29",
   },
   {
     id: "dga",
@@ -111,6 +113,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2024–2026", event: "Mise en place progressive des espaces européens de données sectoriels" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R0868",
+    updatedAt: "2025-04-29",
   },
   {
     id: "dataact",
@@ -153,6 +156,7 @@ export const regulationsData: RegulationData[] = [
       { date: "12 sept. 2027", event: "Application des exigences d'interopérabilité cloud" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R2854",
+    updatedAt: "2025-04-29",
   },
   {
     id: "dsa",
@@ -201,6 +205,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2024–2026", event: "Premières procédures d'enquête (X/Twitter, TikTok, Meta, AliExpress, Temu)" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R2065",
+    updatedAt: "2025-04-29",
   },
   {
     id: "dma",
@@ -248,6 +253,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2024–2026", event: "Premières enquêtes de conformité (Apple, Alphabet, Meta)" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925",
+    updatedAt: "2025-04-29",
   },
   {
     id: "p2b",
@@ -288,6 +294,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2022", event: "Adoption du DMA, qui va plus loin pour les gatekeepers" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019R1150",
+    updatedAt: "2025-04-29",
   },
   {
     id: "nis2",
@@ -334,6 +341,7 @@ export const regulationsData: RegulationData[] = [
       { date: "Juil. 2026 (prévu)", event: "Vote de la loi de transposition à l'Assemblée nationale" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022L2555",
+    updatedAt: "2025-04-29",
   },
   {
     id: "cra",
@@ -378,6 +386,7 @@ export const regulationsData: RegulationData[] = [
       { date: "11 déc. 2027", event: "Application de l'ensemble des obligations (security by design, marquage CE)" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R2847",
+    updatedAt: "2025-04-29",
   },
   {
     id: "cybersecact",
@@ -419,6 +428,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2024–2026", event: "Schémas en cours : EUCS (cloud), EU5G (réseaux 5G)" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019R0881",
+    updatedAt: "2025-04-29",
   },
   {
     id: "aiact",
@@ -466,6 +476,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2 août 2027", event: "Application aux systèmes intégrés dans des produits réglementés" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R1689",
+    updatedAt: "2025-04-29",
   },
   {
     id: "dora",
@@ -508,6 +519,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2025–2026", event: "Premiers cycles de tests TLPT et désignation des prestataires tiers critiques" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R2554",
+    updatedAt: "2025-04-29",
   },
   {
     id: "mica",
@@ -551,6 +563,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2025–2026", event: "Période transitoire pour les CASP existants (agrément à obtenir)" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R1114",
+    updatedAt: "2025-04-29",
   },
   {
     id: "eidas2",
@@ -592,6 +605,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2026–2027", event: "Déploiement progressif et certification des portefeuilles" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R1183",
+    updatedAt: "2025-04-29",
   },
   {
     id: "copyright",
@@ -633,6 +647,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2022–2026", event: "Contentieux sur le droit voisin (Google, Meta, négociations en cours)" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019L0790",
+    updatedAt: "2025-04-29",
   },
   {
     id: "eprivacy",
@@ -673,6 +688,7 @@ export const regulationsData: RegulationData[] = [
       { date: "2017–présent", event: "Négociations bloquées au Conseil sur le règlement ePrivacy" },
     ],
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32002L0058",
+    updatedAt: "2025-04-29",
   },
 ];
 
