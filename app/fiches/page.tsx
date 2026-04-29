@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FileText, Tag } from "lucide-react";
 
 const mockFiches = [
@@ -72,9 +73,10 @@ export default function FichesPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {mockFiches.map((fiche) => (
-          <div
+          <Link
             key={fiche.slug}
-            className="bg-white border border-gray-200 rounded-xl p-6 hover:border-navy-300 hover:shadow-md transition-all flex flex-col"
+            href={`/fiches/${fiche.slug}`}
+            className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gold-400 hover:shadow-md transition-all flex flex-col group"
           >
             <div className="flex items-start justify-between gap-3 mb-3">
               <FileText className="w-5 h-5 text-navy-400 flex-shrink-0 mt-0.5" />
@@ -100,9 +102,9 @@ export default function FichesPage() {
               ))}
             </div>
             <div className="mt-auto pt-3 border-t border-gray-100">
-              <span className="text-xs text-gray-400 italic">Fiche disponible prochainement</span>
+              <span className="text-xs text-gold-600 font-medium group-hover:underline">Lire la fiche →</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
