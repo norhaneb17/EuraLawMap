@@ -1,0 +1,88 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X, Scale } from "lucide-react";
+
+const navLinks = [
+  { href: "/reglements", label: "Règlements" },
+  { href: "/fiches", label: "Fiches" },
+  { href: "/glossaire", label: "Glossaire" },
+  { href: "/assistant", label: "Assistant IA" },
+  { href: "/quiz", label: "Quiz" },
+];
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 bg-navy-950 border-b border-navy-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 bg-gold-500 rounded flex items-center justify-center">
+              <Scale className="w-4 h-4 text-navy-950" />
+            </div>
+            <span className="font-serif-display text-xl font-bold text-white">
+              Euralaw<span className="text-gold-400">Map</span>
+            </span>
+          </Link>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => {
+              const isActive = pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+                    isActive
+                      ? "bg-navy-800 text-gold-400"
+                      : "text-navy-200 hover:text-white hover:bg-navy-800"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden text-navy-200 hover:text-white"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-navy-900 border-t border-navy-800 px-4 py-3 space-y-1">
+          {navLinks.map((link) => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-3 py-2 rounded text-sm font-medium transition-colors ${
+                  isActive
+                    ? "bg-navy-800 text-gold-400"
+                    : "text-navy-200 hover:text-white hover:bg-navy-800"
+                }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </header>
+  );
+}
