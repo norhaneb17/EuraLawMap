@@ -14,20 +14,32 @@ export function useTheme() {
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  // Read initial theme directly from <html> class — already set by the blocking script
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof document !== "undefined") {
+      return document.documentElement.classList.contains("dark") ? "dark" : "light";
+    }
+    return "light";
+  });
 
-  // On mount, read saved preference or system preference
+  // Keep state in sync if system preference changes and no saved preference
   useEffect(() => {
-    const saved = localStorage.getItem("euralexmap_theme") as Theme | null;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = saved ?? (prefersDark ? "dark" : "light");
-    setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
+    const saved = localStorage.getItem("euralexmap_theme");
+    if (saved) return; // user has explicit preference — don't override
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      const next: Theme = e.matches ? "dark" : "light";
+      setTheme(next);
+      document.documentElement.classList.toggle("dark", e.matches);
+    };
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   const toggle = () => {
     setTheme((prev) => {
-      const next = prev === "light" ? "dark" : "light";
+      const next: Theme = prev === "light" ? "dark" : "light";
       localStorage.setItem("euralexmap_theme", next);
       document.documentElement.classList.toggle("dark", next === "dark");
       return next;
