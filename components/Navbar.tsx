@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/reglements", label: "Règlements" },
@@ -22,13 +22,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-gold-500 rounded flex items-center justify-center">
-              <Scale className="w-4 h-4 text-navy-950" />
-            </div>
-            <span className="font-serif-display text-xl font-bold text-white">
-              EuraLex<span className="text-gold-400">Map</span>
-            </span>
+          <Link href="/" className="flex flex-col leading-none">
+            <span className="text-white font-bold tracking-widest text-sm uppercase">EuraLex<span className="text-gold-400">Map</span></span>
+            <span className="text-navy-400 text-[10px] tracking-widest uppercase font-medium">Droit du numérique européen</span>
           </Link>
 
           {/* Desktop nav */}

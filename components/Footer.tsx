@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Scale } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,13 +6,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 bg-gold-500 rounded flex items-center justify-center">
-                <Scale className="w-3.5 h-3.5 text-navy-950" />
+            <div className="mb-3">
+              <div className="flex flex-col leading-none">
+                <span className="text-white font-bold tracking-widest text-sm uppercase">EuraLex<span className="text-gold-400">Map</span></span>
+                <span className="text-navy-500 text-[10px] tracking-widest uppercase font-medium mt-0.5">Droit du numérique européen</span>
               </div>
-              <span className="font-serif-display text-lg font-bold text-white">
-                EuraLex<span className="text-gold-400">Map</span>
-              </span>
             </div>
             <p className="text-navy-400 text-sm">
               La plateforme de référence pour comprendre le droit européen du numérique.

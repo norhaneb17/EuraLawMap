@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, FileText, Brain, Scale, MessageSquare, Trophy } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Brain, MessageSquare, Trophy } from "lucide-react";
 import RegulationCard from "@/components/RegulationCard";
 import { mockRegulations, mockStats } from "@/lib/mock-data";
 
@@ -40,11 +40,8 @@ export default function HomePage() {
       <section className="relative bg-navy-950 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-navy-800 via-navy-950 to-navy-950 opacity-60" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-9 h-9 bg-gold-500 rounded-lg flex items-center justify-center shadow-lg">
-              <Scale className="w-5 h-5 text-navy-950" />
-            </div>
-            <span className="text-gold-400 text-sm font-semibold tracking-widest uppercase">EuraLexMap</span>
+          <div className="mb-6">
+            <span className="text-gold-400 text-xs font-semibold tracking-widest uppercase border border-gold-800 px-3 py-1 rounded-full">Droit européen du numérique</span>
           </div>
           <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl">
             Le droit européen du numérique,{" "}
