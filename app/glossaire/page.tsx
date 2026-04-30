@@ -64,7 +64,8 @@ export default function GlossairePage() {
               {grouped[letter].map((concept) => (
                 <div
                   key={concept.term}
-                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 hover:border-navy-200 dark:hover:border-navy-600 transition-colors"
+                  id={`term-${concept.term.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 hover:border-navy-200 dark:hover:border-navy-600 transition-colors scroll-mt-20"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">

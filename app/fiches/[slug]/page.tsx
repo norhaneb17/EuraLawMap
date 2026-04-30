@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Tag, BookOpen, Scale, AlertTriangle, CheckCircle } from "lucide-react";
+import { HighlightedText } from "@/components/GlossaryHighlight";
 
 
 const fichesData: Record<string, {
@@ -383,7 +384,7 @@ export default function FichePage({ params }: { params: { slug: string } }) {
           {fiche.title}
         </h1>
         <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed border-l-4 border-gold-400 pl-4">
-          {fiche.intro}
+          <HighlightedText text={fiche.intro} />
         </p>
       </div>
 
@@ -395,7 +396,7 @@ export default function FichePage({ params }: { params: { slug: string } }) {
               <BookOpen className="w-5 h-5 text-gold-500 flex-shrink-0" />
               {section.heading}
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{section.content}</p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed"><HighlightedText text={section.content} /></p>
           </div>
         ))}
       </div>
@@ -421,7 +422,7 @@ export default function FichePage({ params }: { params: { slug: string } }) {
         <h2 className="font-serif-display text-lg font-bold text-navy-900 dark:text-white mb-3">
           💡 Exemple concret
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{fiche.exemple}</p>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed"><HighlightedText text={fiche.exemple} /></p>
       </div>
 
       {/* Pièges à éviter */}
@@ -432,9 +433,9 @@ export default function FichePage({ params }: { params: { slug: string } }) {
         </h2>
         <ul className="space-y-2">
           {fiche.pieges.map((p, i) => (
-            <li key={i} className="flex gap-2 text-sm text-red-700">
+            <li key={i} className="flex gap-2 text-sm text-red-700 dark:text-red-400">
               <span className="mt-1 flex-shrink-0">⚠</span>
-              <span>{p}</span>
+              <span><HighlightedText text={p} /></span>
             </li>
           ))}
         </ul>
@@ -448,9 +449,9 @@ export default function FichePage({ params }: { params: { slug: string } }) {
         </h2>
         <ul className="space-y-2">
           {fiche.aRetenir.map((r, i) => (
-            <li key={i} className="flex gap-2 text-sm text-green-800">
+            <li key={i} className="flex gap-2 text-sm text-green-800 dark:text-green-400">
               <span className="mt-1 flex-shrink-0">✓</span>
-              <span>{r}</span>
+              <span><HighlightedText text={r} /></span>
             </li>
           ))}
         </ul>
