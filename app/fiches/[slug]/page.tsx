@@ -379,10 +379,10 @@ export default function FichePage({ params }: { params: { slug: string } }) {
             </span>
           ))}
         </div>
-        <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 mb-4 leading-tight">
+        <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 dark:text-white mb-4 leading-tight">
           {fiche.title}
         </h1>
-        <p className="text-gray-600 text-lg leading-relaxed border-l-4 border-gold-400 pl-4">
+        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed border-l-4 border-gold-400 pl-4">
           {fiche.intro}
         </p>
       </div>
@@ -391,11 +391,11 @@ export default function FichePage({ params }: { params: { slug: string } }) {
       <div className="space-y-8 mb-10">
         {fiche.sections.map((section, i) => (
           <div key={i}>
-            <h2 className="font-serif-display text-xl font-bold text-navy-900 mb-3 flex items-center gap-2">
+            <h2 className="font-serif-display text-xl font-bold text-navy-900 dark:text-white mb-3 flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-gold-500 flex-shrink-0" />
               {section.heading}
             </h2>
-            <p className="text-gray-700 leading-relaxed">{section.content}</p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{section.content}</p>
           </div>
         ))}
       </div>
@@ -417,15 +417,15 @@ export default function FichePage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Exemple concret */}
-      <div className="bg-white border-l-4 border-gold-400 rounded-r-xl p-6 mb-8 shadow-sm">
-        <h2 className="font-serif-display text-lg font-bold text-navy-900 mb-3">
+      <div className="bg-white dark:bg-gray-800 border-l-4 border-gold-400 rounded-r-xl p-6 mb-8 shadow-sm">
+        <h2 className="font-serif-display text-lg font-bold text-navy-900 dark:text-white mb-3">
           💡 Exemple concret
         </h2>
-        <p className="text-gray-700 leading-relaxed">{fiche.exemple}</p>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{fiche.exemple}</p>
       </div>
 
       {/* Pièges à éviter */}
-      <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-8">
         <h2 className="font-serif-display text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
           <AlertTriangle className="w-5 h-5 text-red-500" />
           Pièges à éviter à l&apos;examen
@@ -441,7 +441,7 @@ export default function FichePage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* À retenir */}
-      <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+      <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-6">
         <h2 className="font-serif-display text-lg font-bold text-green-800 mb-4 flex items-center gap-2">
           <CheckCircle className="w-5 h-5 text-green-500" />
           L&apos;essentiel à retenir

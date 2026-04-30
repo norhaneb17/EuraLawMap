@@ -30,10 +30,10 @@ export default function GlossairePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-10">
-        <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 mb-3">
+        <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 dark:text-white mb-3">
           Glossaire
         </h1>
-        <p className="text-gray-500 max-w-2xl">
+        <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
           Les concepts essentiels du droit européen du numérique, définis et référencés
           avec les articles pertinents.
         </p>
@@ -64,14 +64,14 @@ export default function GlossairePage() {
               {grouped[letter].map((concept) => (
                 <div
                   key={concept.term}
-                  className="bg-white border border-gray-200 rounded-xl p-5 hover:border-navy-200 transition-colors"
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 hover:border-navy-200 dark:hover:border-navy-600 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
-                      <h3 className="font-serif-display font-semibold text-navy-900 text-base mb-2">
+                      <h3 className="font-serif-display font-semibold text-navy-900 dark:text-white text-base mb-2">
                         {concept.term}
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">
                         {concept.definition}
                       </p>
                     </div>

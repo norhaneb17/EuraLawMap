@@ -287,20 +287,20 @@ export default function QuizPage() {
         )}
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 md:p-8 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-xs font-semibold bg-navy-50 text-navy-700 border border-navy-200 px-2.5 py-1 rounded-full">
             {question.regulation}
           </span>
         </div>
 
-        <p className="font-serif-display text-lg font-semibold text-navy-900 mb-6 leading-snug">
+        <p className="font-serif-display text-lg font-semibold text-navy-900 dark:text-white mb-6 leading-snug">
           {question.question}
         </p>
 
         <div className="space-y-3 mb-6">
           {question.options.map((option, idx) => {
-            let style = "bg-white border-gray-200 text-gray-700 hover:border-navy-400 cursor-pointer";
+            let style = "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-navy-400 cursor-pointer";
             let icon = null;
             if (isAnswered) {
               if (idx === question.correct_answer) {
@@ -310,7 +310,7 @@ export default function QuizPage() {
                 style = "bg-red-50 border-red-400 text-red-800";
                 icon = <XCircle className="w-4 h-4 text-red-500 flex-shrink-0" />;
               } else {
-                style = "bg-white border-gray-100 text-gray-400 cursor-default";
+                style = "bg-white dark:bg-gray-700/50 border-gray-100 dark:border-gray-600 text-gray-400 cursor-default";
               }
             }
             return (

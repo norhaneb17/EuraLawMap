@@ -36,7 +36,7 @@ const features = [
 
 export default function HomePage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-gray-900">
       {/* Hero */}
       <section className="relative bg-navy-950 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-navy-800 via-navy-950 to-navy-950 opacity-60" />
@@ -96,7 +96,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/reglements"
-            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-navy-600 hover:text-navy-900 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-navy-600 dark:text-navy-300 hover:text-navy-900 dark:hover:text-white transition-colors"
           >
             Voir tous <ArrowRight className="w-4 h-4" />
           </Link>

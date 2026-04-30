@@ -55,8 +55,8 @@ export default function AssistantPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col h-[calc(100vh-8rem)]">
       <div className="mb-6">
-        <h1 className="font-serif-display text-2xl font-bold text-navy-950">Assistant IA Juridique</h1>
-        <p className="text-gray-500 text-sm mt-1">
+        <h1 className="font-serif-display text-2xl font-bold text-navy-950 dark:text-white">Assistant IA Juridique</h1>
+        <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
           Spécialisé en droit européen du numérique — DSA, DMA, AI Act, RGPD, DGA, NIS2...
         </p>
       </div>
@@ -72,7 +72,7 @@ export default function AssistantPage() {
                 <button
                   key={q}
                   onClick={() => sendMessage(q)}
-                  className="text-left text-sm bg-white border border-gray-200 hover:border-navy-300 rounded-xl px-4 py-3 text-gray-700 hover:text-navy-900 transition-all"
+                  className="text-left text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-navy-300 dark:hover:border-navy-600 rounded-xl px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-navy-900 dark:hover:text-white transition-all"
                 >
                   {q}
                 </button>
@@ -92,7 +92,7 @@ export default function AssistantPage() {
               className={`max-w-[80%] rounded-xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
                 msg.role === "user"
                   ? "bg-navy-950 text-white"
-                  : "bg-white border border-gray-200 text-gray-800"
+                  : "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200"
               }`}
             >
               {msg.content}
@@ -110,7 +110,7 @@ export default function AssistantPage() {
             <div className="w-7 h-7 rounded-full bg-navy-950 flex items-center justify-center flex-shrink-0">
               <Bot className="w-4 h-4 text-gold-400" />
             </div>
-            <div className="bg-white border border-gray-200 rounded-xl px-4 py-3">
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3">
               <Loader2 className="w-4 h-4 text-navy-400 animate-spin" />
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function AssistantPage() {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && sendMessage(input)}
           placeholder="Posez votre question sur le droit européen du numérique..."
-          className="flex-1 px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100"
+          className="flex-1 px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 dark:focus:ring-navy-800"
           disabled={loading}
         />
         <button
