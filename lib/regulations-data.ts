@@ -5,7 +5,7 @@ export interface RegulationData {
   name: string;
   ref: string;
   type: string;
-  status: "active" | "partial" | "upcoming";
+  status: "active" | "partial" | "upcoming" | "transposed";
   statusLabel: string;
   title: string;
   fullName: string;
@@ -618,7 +618,7 @@ export const regulationsData: RegulationData[] = [
     name: "Droit d'auteur numérique",
     ref: "Directive (UE) 2019/790",
     type: "Directive",
-    status: "active",
+    status: "transposed",
     statusLabel: "Transposée",
     title: "Directive droit d'auteur",
     fullName: "Directive sur le droit d'auteur et les droits voisins dans le marché unique numérique",
