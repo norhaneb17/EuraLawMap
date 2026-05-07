@@ -108,11 +108,11 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
           <div className="space-y-8">
             <section>
               <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Contexte</h2>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{regulation.context}</p>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: regulation.context }} />
             </section>
             <section>
               <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Champ d&apos;application</h2>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{regulation.champ}</p>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: regulation.champ }} />
             </section>
             <section>
               <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Acteurs concernés</h2>
@@ -137,7 +137,7 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
               {regulation.type === "Règlement" ? "Règlement — Application directe" : "Directive — Transposition nécessaire"}
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{regulation.natureNote}</p>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: regulation.natureNote }} />
             </div>
           </div>
         )}
@@ -159,6 +159,11 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
         {/* Sanctions */}
         {activeTab === "sanctions" && (
           <div className="space-y-4">
+            {regulation.sanctionsIntro && (
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-5 py-4 italic">
+                {regulation.sanctionsIntro}
+              </p>
+            )}
             {regulation.sanctions.map((s, i) => (
               <div key={i} className="flex gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5">
                 <div className="flex-shrink-0">
@@ -175,7 +180,7 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
         {/* Articulations */}
         {activeTab === "articulations" && (
           <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{regulation.articulations}</p>
+            <div className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: regulation.articulations }} />
           </div>
         )}
 
