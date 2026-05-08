@@ -66,9 +66,10 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
           </h1>
           <p className="text-navy-300 text-base mb-6">{regulation.fullName}</p>
 
-          <p className="text-navy-300 text-sm leading-relaxed max-w-4xl mb-8 border-l-2 border-navy-700 pl-4">
-            {regulation.summary}
-          </p>
+          <div
+            className="text-navy-300 text-sm leading-relaxed max-w-4xl mb-8 border-l-2 border-navy-700 pl-4 prose prose-sm prose-invert max-w-none [&_ul]:mt-2 [&_li]:my-1"
+            dangerouslySetInnerHTML={{ __html: regulation.summary }}
+          />
 
           <div className="flex items-center gap-4 mb-6">
             <a
