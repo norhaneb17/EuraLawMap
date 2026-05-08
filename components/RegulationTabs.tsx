@@ -172,9 +172,10 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
         {activeTab === "sanctions" && (
           <div className="space-y-4">
             {regulation.sanctionsIntro && (
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-5 py-4 italic">
-                {regulation.sanctionsIntro}
-              </p>
+              <div
+                className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-5 py-4 italic prose prose-sm max-w-none dark:prose-invert"
+                dangerouslySetInnerHTML={{ __html: regulation.sanctionsIntro }}
+              />
             )}
             {regulation.sanctions.map((s, i) => (
               <div key={i} className="flex gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5">
