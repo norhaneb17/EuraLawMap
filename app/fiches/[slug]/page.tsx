@@ -39,7 +39,7 @@ const fichesData: Record<string, {
       {
         heading: "Répartition des compétences : CSN vs Commission européenne",
         content:
-          "Le DSA distingue selon la taille des plateformes. Pour les très grandes plateformes en ligne (TGPEL) et très grands moteurs de recherche en ligne (TGMRL) — ceux ayant plus de 45 millions d'utilisateurs actifs mensuels dans l'UE — c'est la Commission européenne qui est l'autorité principale de surveillance, en coordination avec les CSN. Pour les autres fournisseurs, le CSN de l'État membre d'établissement est compétent (principe du pays d'origine).",
+          "Le DSA distingue selon la taille des plateformes. Pour les très grandes plateformes en ligne (TGPEL, désignées VLOP dans le règlement) et très grands moteurs de recherche en ligne (TGMRL) — ceux ayant plus de 45 millions d'utilisateurs actifs mensuels dans l'UE — c'est la Commission européenne qui est l'autorité principale de surveillance, en coordination avec les CSN. Pour les autres fournisseurs, le CSN de l'État membre d'établissement est compétent (principe du pays d'origine).",
       },
       {
         heading: "Pouvoirs de sanction",
@@ -58,7 +58,7 @@ const fichesData: Record<string, {
     pieges: [
       "Ne pas confondre CSN et autorité de protection des données (CNIL) : la CNIL reste compétente pour le RGPD, le CSN pour le DSA.",
       "Le principe du pays d'origine signifie que c'est l'État d'établissement (siège social) qui détermine le CSN compétent, pas le pays où les utilisateurs se trouvent.",
-      "Les TGPEL (ex : Meta, TikTok, YouTube) relèvent principalement de la Commission européenne, pas du CSN national.",
+      "Les VLOP/TGPEL (ex : Meta, TikTok, YouTube) relèvent principalement de la Commission européenne, pas du CSN national.",
     ],
     aRetenir: [
       "Un CSN par État membre, désigné par la loi nationale.",
@@ -86,17 +86,42 @@ const fichesData: Record<string, {
       {
         heading: "Critères de désignation (article 3 DMA)",
         content:
-          "Trois critères cumulatifs : (1) Taille significative : CA annuel ≥ 7,5 milliards € dans l'EEE ou capitalisation boursière ≥ 75 milliards €, et service actif dans au moins 3 États membres ; (2) Position de contrôle : service utilisé par ≥ 45 millions d'utilisateurs finaux actifs mensuels dans l'UE et ≥ 10 000 entreprises utilisatrices actives annuelles dans l'UE ; (3) Position durable : ces seuils atteints durant 3 des dernières 5 années. La Commission peut aussi désigner directement sans ces seuils si elle constate une position de contrôle réelle.",
+          `Trois critères <strong>cumulatifs</strong> doivent être remplis simultanément :
+<ul>
+<li><strong>Taille significative</strong> : chiffre d'affaires annuel ≥ 7,5 milliards € dans l'EEE, ou capitalisation boursière ≥ 75 milliards €, et service actif dans au moins 3 États membres.</li>
+<li><strong>Position de contrôle</strong> : service utilisé par ≥ 45 millions d'utilisateurs finaux actifs par mois dans l'UE, et ≥ 10 000 entreprises utilisatrices actives par an dans l'UE.</li>
+<li><strong>Position durable</strong> : ces seuils atteints durant 3 des 5 dernières années.</li>
+</ul>
+La Commission peut également désigner un gatekeeper sans que ces seuils soient atteints, si elle constate directement une position de contrôle réelle sur le marché.`,
       },
       {
         heading: "Obligations des gatekeepers",
         content:
-          "Le DMA impose des obligations dites « per se » (automatiques, sans analyse de marché) : (1) Obligations positives (article 6) : permettre l'interopérabilité, donner aux entreprises utilisatrices accès à leurs données, permettre aux utilisateurs finaux de désinstaller les apps préinstallées ; (2) Obligations négatives (article 5) : ne pas combiner données personnelles provenant de différents SPE sans consentement, ne pas pratiquer l'auto-préférence, ne pas empêcher les utilisateurs de contacter les entreprises en dehors de la plateforme.",
+          `Le DMA impose des obligations directement applicables aux gatekeepers, sans qu'il faille démontrer un abus de position dominante.
+<br/><br/><strong>Obligations positives (article 6) :</strong>
+<ul>
+<li>Permettre l'interopérabilité de ses services avec ceux de tiers.</li>
+<li>Donner aux entreprises utilisatrices accès à leurs données générées sur la plateforme.</li>
+<li>Permettre aux utilisateurs finaux de désinstaller les applications préinstallées.</li>
+</ul>
+<strong>Obligations négatives (article 5) :</strong>
+<ul>
+<li>Ne pas combiner les données personnelles provenant de différents services de plateforme essentiels sans consentement explicite.</li>
+<li>Ne pas pratiquer l'auto-préférence (favoriser ses propres produits et services dans les résultats).</li>
+<li>Ne pas empêcher les utilisateurs finaux de contacter directement les entreprises en dehors de la plateforme.</li>
+</ul>`,
       },
       {
         heading: "Procédure de désignation",
         content:
-          "La Commission européenne est seule compétente pour désigner les gatekeepers. La procédure : (1) Notification obligatoire du fournisseur atteignant les seuils (dans les 2 mois) ; (2) Enquête de marché de la Commission (max 12 mois) ; (3) Décision de désignation. Les gatekeepers désignés ont 6 mois pour se conformer aux obligations. Premiers gatekeepers désignés en septembre 2023 : Alphabet (Google), Amazon, Apple, ByteDance (TikTok), Meta, Microsoft.",
+          `La Commission européenne est seule compétente pour désigner les gatekeepers. La procédure se déroule ainsi :
+<ul>
+<li>Notification obligatoire par le fournisseur qui atteint les seuils quantitatifs (dans les 2 mois suivant le dépassement).</li>
+<li>Ouverture d'une enquête de marché par la Commission (durée maximale : 12 mois).</li>
+<li>Décision de désignation (ou non) par la Commission.</li>
+<li>Le gatekeeper désigné dispose de 6 mois pour se mettre en conformité avec l'ensemble de ses obligations.</li>
+</ul>
+Premiers gatekeepers désignés en septembre 2023 : Alphabet (Google), Amazon, Apple, ByteDance (TikTok), Meta, Microsoft.`,
       },
     ],
     articles: [
@@ -116,7 +141,7 @@ const fichesData: Record<string, {
     aRetenir: [
       "6 gatekeepers désignés en 2023 : Alphabet, Amazon, Apple, ByteDance, Meta, Microsoft.",
       "Seuils : CA ≥ 7,5 Md€ OU capitalisation ≥ 75 Md€ + 45M utilisateurs UE.",
-      "Obligations per se : automatiques, sans analyse de marché préalable.",
+      "Les obligations s'appliquent directement, sans qu'il faille démontrer un abus de position dominante.",
       "Sanction maximale : 10 % du CA mondial (20 % en récidive).",
       "Seule la Commission européenne peut désigner et sanctionner les gatekeepers au titre du DMA.",
     ],
@@ -134,17 +159,36 @@ const fichesData: Record<string, {
       {
         heading: "Quand la désignation d'un DPO est-elle obligatoire ?",
         content:
-          "L'article 37 RGPD impose la désignation d'un DPO dans trois hypothèses : (1) Le responsable du traitement ou le sous-traitant est une autorité ou un organisme public (sauf juridictions dans l'exercice de leurs fonctions juridictionnelles) ; (2) Les activités de base consistent en des opérations de traitement qui exigent un suivi régulier et systématique à grande échelle des personnes concernées (ex : profilage publicitaire, surveillance des comportements en ligne) ; (3) Les activités de base consistent en un traitement à grande échelle de catégories particulières de données (article 9) ou de données relatives à des condamnations pénales (article 10). En dehors de ces cas, la désignation reste possible mais facultative.",
+          `L'article 37 RGPD impose la désignation d'un DPO dans trois hypothèses :
+<ul>
+<li>Le responsable du traitement ou le sous-traitant est une <strong>autorité ou un organisme public</strong> (à l'exception des juridictions dans l'exercice de leurs fonctions juridictionnelles).</li>
+<li>Les activités de base consistent en des opérations de traitement exigeant un <strong>suivi régulier et systématique à grande échelle</strong> des personnes concernées (exemples : profilage publicitaire, surveillance des comportements en ligne).</li>
+<li>Les activités de base consistent en un <strong>traitement à grande échelle de catégories particulières de données</strong> (article 9 RGPD : données de santé, biométriques, etc.) ou de données relatives à des condamnations pénales (article 10 RGPD).</li>
+</ul>
+En dehors de ces trois cas, la désignation reste possible mais facultative.`,
       },
       {
         heading: "Profil et statut du DPO",
         content:
-          "Le DPO est désigné sur la base de ses qualités professionnelles, notamment une connaissance spécialisée du droit et des pratiques en matière de protection des données. Il peut être un salarié de l'organisme ou un prestataire externe (DPO mutualisé ou externalisé). Un groupe d'entreprises peut nommer un DPO unique. Le DPO bénéficie de garanties d'indépendance : il ne peut être sanctionné ou relevé de ses fonctions pour l'exercice de ses missions. Il rapporte directement au niveau le plus élevé de la direction.",
+          `Le DPO est désigné sur la base de ses qualités professionnelles, notamment une connaissance spécialisée du droit et des pratiques en matière de protection des données. Plusieurs modalités de désignation sont possibles :
+<ul>
+<li>Salarié interne de l'organisme.</li>
+<li>Prestataire externe (DPO mutualisé ou externalisé), solution fréquente pour les PME.</li>
+<li>DPO unique pour un groupe d'entreprises, si le DPO est facilement joignable depuis chaque établissement.</li>
+</ul>
+Le DPO bénéficie de garanties d'indépendance importantes : il ne peut être sanctionné ni relevé de ses fonctions pour l'exercice de ses missions, et rapporte directement au niveau le plus élevé de la direction.`,
       },
       {
         heading: "Missions du DPO",
         content:
-          "L'article 39 RGPD énumère cinq missions minimales : (1) Informer et conseiller le responsable du traitement, le sous-traitant et les employés sur leurs obligations RGPD ; (2) Contrôler le respect du RGPD et des politiques internes (sensibilisation, audits) ; (3) Conseiller sur l'analyse d'impact relative à la protection des données (AIPD) et en vérifier l'exécution ; (4) Coopérer avec l'autorité de contrôle (CNIL) ; (5) Faire office de point de contact avec la CNIL pour toute question relative aux traitements.",
+          `L'article 39 RGPD énumère cinq missions minimales du DPO :
+<ul>
+<li><strong>Informer et conseiller</strong> le responsable du traitement, le sous-traitant et les employés sur leurs obligations au titre du RGPD.</li>
+<li><strong>Contrôler le respect</strong> du RGPD et des politiques internes de l'organisme (sensibilisation, formation, audits).</li>
+<li><strong>Conseiller sur les analyses d'impact</strong> relatives à la protection des données (AIPD) et vérifier leur bonne exécution.</li>
+<li><strong>Coopérer avec l'autorité de contrôle</strong> (la CNIL en France).</li>
+<li><strong>Faire office de point de contact</strong> avec la CNIL pour toute question relative aux traitements de données.</li>
+</ul>`,
       },
       {
         heading: "Responsabilité du DPO",
@@ -186,12 +230,30 @@ const fichesData: Record<string, {
       {
         heading: "L'approche par le risque de l'AI Act",
         content:
-          "L'AI Act classe les systèmes d'IA en quatre catégories selon leur niveau de risque : (1) Risque inacceptable : pratiques interdites (article 5), ex : notation sociale par les gouvernements, manipulation subliminale ; (2) Haut risque : obligations strictes (articles 8 à 15) ; (3) Risque limité : obligations de transparence allégées (article 50) ; (4) Risque minimal : pas d'obligations spécifiques. Les systèmes d'IA à usage général (GPAI) font l'objet d'un régime particulier (articles 51 à 56).",
+          `L'AI Act classe les systèmes d'IA en quatre niveaux de risque :
+<ul>
+<li><strong>Risque inacceptable (article 5)</strong> : pratiques interdites, dont la mise sur le marché est prohibée. Exemples : notation sociale par les pouvoirs publics, manipulation subliminale à l'insu de la personne, identification biométrique à distance en temps réel dans les espaces publics (sauf exceptions strictes).</li>
+<li><strong>Haut risque (articles 6 à 49)</strong> : systèmes autorisés mais soumis aux obligations de conformité les plus strictes avant leur mise sur le marché.</li>
+<li><strong>Risque limité (article 50)</strong> : obligations de transparence allégées. L'utilisateur doit être informé qu'il interagit avec une IA (exemple : chatbots, deep fakes).</li>
+<li><strong>Risque minimal</strong> : aucune obligation spécifique. Exemples : filtres anti-spam, jeux vidéo intégrant de l'IA.</li>
+</ul>
+Les systèmes d'IA à usage général (GPAI), comme les grands modèles de langage (GPT, Claude…), font l'objet d'un régime particulier aux articles 51 à 56, distinct de la classification par risque.`,
       },
       {
         heading: "Définition des systèmes d'IA à haut risque",
         content:
-          "Deux catégories de systèmes à haut risque : (A) Systèmes listés à l'Annexe I (composants de sécurité de produits réglementés) : IA intégrée dans des jouets, véhicules, dispositifs médicaux, ascenseurs, équipements radio, etc. → soumis à une procédure de mise sur le marché existante ; (B) Systèmes listés à l'Annexe III (domaines à haut risque autonomes) : 8 catégories dont l'identification biométrique, les infrastructures critiques, l'éducation, l'emploi, les services essentiels (crédit, assurance), la répression, la migration et l'administration de la justice.",
+          `Deux catégories de systèmes à haut risque (article 6 AI Act) :
+<ul>
+<li><strong>Systèmes listés à l'Annexe I</strong> — composants de sécurité de produits déjà réglementés : IA intégrée dans des jouets, véhicules, dispositifs médicaux, ascenseurs, équipements radio, etc. Ces systèmes sont soumis aux procédures de mise sur le marché existantes pour le produit concerné.</li>
+<li><strong>Systèmes listés à l'Annexe III</strong> — domaines à haut risque autonomes : 8 catégories spécifiques identifiées comme présentant des risques pour les droits fondamentaux (identification biométrique, infrastructures critiques, éducation, emploi, services essentiels comme le crédit ou l'assurance, répression, migration, administration de la justice).</li>
+</ul>`,
+      },
+      {
+        heading: "Comprendre les Annexes I et III",
+        content:
+          `Les deux annexes jouent des rôles distincts dans la classification :
+<br/><br/><strong>Annexe I — Produits réglementés intégrant de l'IA :</strong> elle liste les catégories de produits déjà soumis à une réglementation européenne de sécurité (directive jouets, règlement dispositifs médicaux, règlement véhicules à moteur, etc.). Lorsqu'un système d'IA est intégré à l'un de ces produits en tant que composant de sécurité, il est automatiquement classé à haut risque. L'objectif est d'éviter qu'une couche d'IA vienne affaiblir les garanties de sécurité de produits déjà encadrés.
+<br/><br/><strong>Annexe III — Domaines sensibles autonomes :</strong> elle liste 8 catégories d'usages de l'IA qui sont considérés comme intrinsèquement risqués pour les droits fondamentaux, indépendamment de tout produit physique. L'objectif est de soumettre à un contrôle renforcé les applications d'IA susceptibles d'affecter des décisions importantes pour les individus (accès à l'emploi, au crédit, à la justice, contrôle aux frontières, etc.). Cette annexe peut être mise à jour par la Commission par actes délégués pour intégrer de nouveaux usages.`,
       },
       {
         heading: "Obligations applicables aux systèmes à haut risque",
@@ -245,7 +307,15 @@ const fichesData: Record<string, {
       {
         heading: "(a) Le consentement",
         content:
-          "Le consentement doit être libre, spécifique, éclairé et univoque (article 4(11)). Il doit être donné par un acte positif clair (case à cocher, signature). Il ne peut pas être déduit du silence ou de cases précochées. La personne concernée peut retirer son consentement à tout moment, aussi facilement qu'elle l'a donné. Le consentement n'est pas la base légale la plus adaptée dans les relations employeur/salarié en raison du déséquilibre de pouvoir. Pour les données de mineurs de moins de 15 ans (en France), le consentement des parents est requis.",
+          `Le consentement doit être <strong>libre, spécifique, éclairé et univoque</strong> (article 4(11) RGPD). Il doit être donné par un acte positif clair. Concrètement :
+<ul>
+<li>Pas de cases précochées : la personne doit cocher elle-même.</li>
+<li>Pas de déduction du silence : ne pas répondre à un email ne vaut pas consentement.</li>
+<li>Retrait facile : la personne peut retirer son consentement à tout moment, aussi facilement qu'elle l'a donné.</li>
+<li>Non adapté aux relations employeur/salarié, en raison du déséquilibre de pouvoir.</li>
+<li>Pour les mineurs de moins de 15 ans en France : consentement des parents requis.</li>
+</ul>
+<strong>Exemple concret — le bandeau cookies :</strong> lorsque vous arrivez sur un site web, une fenêtre apparaît : « Acceptez-vous que nous utilisions des cookies publicitaires pour personnaliser votre expérience ? » avec les boutons « Accepter » et « Refuser ». C'est un mécanisme de recueil du consentement. Si le bouton « Refuser » est caché ou peu visible, si les cookies sont déjà cochés par défaut, ou si refuser est plus difficile qu'accepter, le consentement n'est pas valide au sens du RGPD — la CNIL a sanctionné plusieurs grandes entreprises pour ce motif.`,
       },
       {
         heading: "(b) Exécution d'un contrat",
@@ -253,14 +323,35 @@ const fichesData: Record<string, {
           "Le traitement est licite s'il est nécessaire à l'exécution d'un contrat auquel la personne concernée est partie, ou à l'exécution de mesures précontractuelles prises à sa demande. Le critère de nécessité est strict : le traitement doit être objectivement indispensable pour exécuter le contrat, pas simplement utile ou pratique. Exemple : traiter l'adresse de livraison d'un client pour exécuter une commande en ligne.",
       },
       {
-        heading: "(c) Obligation légale et (d) Intérêts vitaux",
+        heading: "(c) Obligation légale",
         content:
-          "(c) Obligation légale : le traitement est nécessaire pour respecter une obligation légale à laquelle le responsable est soumis (ex : conservation des bulletins de paie par un employeur, transmission de données fiscales à l'administration). La loi doit être suffisamment précise. (d) Intérêts vitaux : base légale résiduelle applicable uniquement lorsque la personne est dans l'incapacité physique ou juridique de donner son consentement et que sa vie ou celle d'une autre personne est en danger (ex : urgence médicale).",
+          `Le traitement est licite s'il est nécessaire au respect d'une obligation légale à laquelle le responsable est soumis. La loi en question doit être suffisamment précise et prévisible. Cette base s'applique, par exemple :
+<ul>
+<li>À la conservation des bulletins de paie par un employeur (obligation issue du Code du travail).</li>
+<li>À la transmission de données fiscales à l'administration (obligation issue du Code général des impôts).</li>
+</ul>
+Le critère de <em>nécessité</em> est important : le traitement doit être indispensable pour respecter l'obligation, pas simplement utile.`,
       },
       {
-        heading: "(e) Mission d'intérêt public et (f) Intérêts légitimes",
+        heading: "(d) Sauvegarde des intérêts vitaux",
         content:
-          "(e) Mission d'intérêt public : traitement nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'autorité publique dont est investi le responsable. Base typique des administrations publiques. (f) Intérêts légitimes : base la plus flexible, applicable aux organismes privés. Nécessite un test de mise en balance en trois étapes : (1) Identifier un intérêt légitime du responsable ou d'un tiers ; (2) Démontrer que le traitement est nécessaire à cet intérêt ; (3) Vérifier que les intérêts ou droits fondamentaux des personnes ne prévalent pas (test de proportionnalité). Cette base ne s'applique pas aux autorités publiques dans l'exercice de leurs missions.",
+          "Base légale résiduelle, applicable uniquement dans des situations d'urgence où la personne est dans l'incapacité physique ou juridique de donner son consentement et où sa vie ou celle d'une autre personne est en danger immédiat. Exemple : un médecin urgentiste qui accède au dossier médical d'un patient inconscient. Cette base ne peut pas être utilisée si la personne est en mesure de consentir.",
+      },
+      {
+        heading: "(e) Mission d'intérêt public",
+        content:
+          "Traitement nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'autorité publique dont est investi le responsable du traitement. C'est la base légale typique des administrations publiques, des organismes de sécurité sociale, des universités dans le cadre de leurs missions de service public. Cette base ne peut pas être invoquée par des organismes privés agissant dans un intérêt purement commercial.",
+      },
+      {
+        heading: "(f) Intérêts légitimes",
+        content:
+          `Base la plus flexible, applicable aux organismes privés. Elle nécessite un <strong>test de mise en balance en trois étapes</strong>, que le responsable doit documenter :
+<ul>
+<li>Identifier un <strong>intérêt légitime</strong> du responsable ou d'un tiers (intérêt commercial, sécurité, prévention de la fraude…).</li>
+<li>Démontrer que le traitement est <strong>nécessaire</strong> à cet intérêt (pas simplement utile ou pratique).</li>
+<li>Vérifier que les intérêts ou droits fondamentaux des personnes concernées <strong>ne prévalent pas</strong> sur cet intérêt (test de proportionnalité).</li>
+</ul>
+Cette base ne s'applique pas aux autorités publiques dans l'exercice de leurs missions, ni au traitement de données de mineurs à des fins commerciales.`,
       },
     ],
     articles: [
@@ -304,17 +395,52 @@ const fichesData: Record<string, {
       {
         heading: "Entités essentielles (EE) — Annexe I",
         content:
-          "Les entités essentielles proviennent des 11 secteurs hautement critiques listés à l'Annexe I : énergie (électricité, pétrole, gaz, hydrogène), transports (aérien, ferroviaire, maritime, routier), secteur bancaire, infrastructures des marchés financiers, santé, eau potable, eaux usées, infrastructure numérique (points d'échange internet, fournisseurs DNS, registres TLD, fournisseurs de services cloud, centres de données, réseaux de diffusion de contenu, fournisseurs de services de confiance), gestion des services TIC (MSP/MSSP), administrations publiques (centrales et régionales dans certains États), espace. Sont automatiquement essentielles les grandes entreprises (+250 salariés ou CA >50M€/bilan >43M€) de ces secteurs.",
+          `<strong>L'Annexe I de NIS2 liste les 11 secteurs hautement critiques</strong> dont relèvent les entités essentielles. L'objectif de cette annexe est d'identifier les secteurs dont la défaillance aurait des conséquences systémiques graves pour l'économie ou la société (coupures d'électricité, paralysie des transports, risques sanitaires majeurs). Les secteurs concernés sont :
+<ul>
+<li>Énergie (électricité, pétrole, gaz, hydrogène)</li>
+<li>Transports (aérien, ferroviaire, maritime, routier)</li>
+<li>Secteur bancaire</li>
+<li>Infrastructures des marchés financiers</li>
+<li>Santé</li>
+<li>Eau potable</li>
+<li>Eaux usées</li>
+<li>Infrastructure numérique (points d'échange internet, DNS, registres TLD, cloud, centres de données, réseaux CDN, services de confiance qualifiés)</li>
+<li>Gestion des services TIC (fournisseurs de services managés MSP/MSSP)</li>
+<li>Administrations publiques centrales (et régionales dans certains États membres)</li>
+<li>Espace</li>
+</ul>
+Sont automatiquement classées essentielles les <strong>grandes entreprises</strong> (plus de 250 salariés, ou CA annuel > 50 M€ et bilan > 43 M€) opérant dans ces secteurs.`,
       },
       {
         heading: "Entités importantes (EI) — Annexe II",
         content:
-          "Les entités importantes proviennent de 7 secteurs critiques supplémentaires listés à l'Annexe II : services postaux et d'expédition, gestion des déchets, fabrication, production et distribution de produits chimiques, production, transformation et distribution de denrées alimentaires, fabrication (dispositifs médicaux, produits informatiques/électroniques/optiques, équipements électriques, machines, véhicules, autres moyens de transport), fournisseurs numériques (places de marché en ligne, moteurs de recherche en ligne, plateformes de réseaux sociaux), recherche. Les moyennes entreprises des secteurs de l'Annexe I constituent également des entités importantes.",
+          `<strong>L'Annexe II de NIS2 liste 7 secteurs critiques supplémentaires</strong> dont relèvent les entités importantes. Ces secteurs présentent des risques moins systémiques que ceux de l'Annexe I, mais restent sensibles. L'objectif de cette annexe est d'étendre la réglementation à des acteurs économiques qui ne sont pas vitaux au sens strict mais dont la compromission pourrait avoir des effets significatifs. Les secteurs concernés sont :
+<ul>
+<li>Services postaux et d'expédition</li>
+<li>Gestion des déchets</li>
+<li>Production et distribution de produits chimiques</li>
+<li>Production, transformation et distribution de denrées alimentaires</li>
+<li>Fabrication (dispositifs médicaux, produits informatiques et électroniques, équipements électriques, machines, véhicules, autres moyens de transport)</li>
+<li>Fournisseurs numériques (places de marché en ligne, moteurs de recherche en ligne, plateformes de réseaux sociaux)</li>
+<li>Recherche</li>
+</ul>
+Sont également classées importantes les <strong>moyennes entreprises</strong> (plus de 50 salariés ou CA/bilan > 10 M€) des secteurs de l'Annexe I qui ne remplissent pas les critères pour être essentielles.`,
       },
       {
         heading: "Différences de régime entre EE et EI",
         content:
-          "Les obligations de sécurité sont identiques pour les deux catégories (article 21 NIS2). La différence porte sur la supervision : (1) Entités essentielles : supervision proactive (ex ante) — l'autorité peut effectuer des audits réguliers, des inspections sur place, des scans de sécurité sans attendre un incident ; sanctions : jusqu'à 10 millions € ou 2 % du CA mondial annuel. (2) Entités importantes : supervision réactive (ex post) — l'autorité n'intervient généralement qu'en cas d'incident ou de plainte ; sanctions : jusqu'à 7 millions € ou 1,4 % du CA mondial annuel. En France, l'ANSSI est l'autorité compétente.",
+          `Les obligations de sécurité (article 21 NIS2) sont <strong>identiques</strong> pour les entités essentielles et les entités importantes. La différence porte uniquement sur le <strong>mode de supervision</strong> et le <strong>niveau de sanctions</strong>.
+<br/><br/><strong>Entités essentielles — supervision proactive (ex ante) :</strong>
+<ul>
+<li>L'autorité nationale (ANSSI en France) peut réaliser des audits réguliers, des inspections sur place et des scans de sécurité <em>sans attendre qu'un incident survienne</em>.</li>
+<li>Sanctions en cas de manquement : jusqu'à <strong>10 millions € ou 2 % du chiffre d'affaires mondial annuel</strong> (le montant le plus élevé est retenu).</li>
+</ul>
+<strong>Entités importantes — supervision réactive (ex post) :</strong>
+<ul>
+<li>L'autorité intervient <em>principalement en réaction</em> à un incident signalé ou à une plainte. Elle n'effectue pas d'audits réguliers sans raison particulière.</li>
+<li>Sanctions en cas de manquement : jusqu'à <strong>7 millions € ou 1,4 % du chiffre d'affaires mondial annuel</strong> (le montant le plus élevé est retenu).</li>
+</ul>
+Dans les deux cas, la notification des incidents significatifs à l'ANSSI est obligatoire dans les délais suivants : alerte précoce dans les 24h, notification complète dans les 72h, rapport final dans le mois.`,
       },
     ],
     articles: [
@@ -396,7 +522,10 @@ export default function FichePage({ params }: { params: { slug: string } }) {
               <BookOpen className="w-5 h-5 text-gold-500 flex-shrink-0" />
               {section.heading}
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed"><HighlightedText text={section.content} /></p>
+            <div
+              className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mt-2 [&_li]:my-1"
+              dangerouslySetInnerHTML={{ __html: section.content }}
+            />
           </div>
         ))}
       </div>
@@ -429,7 +558,7 @@ export default function FichePage({ params }: { params: { slug: string } }) {
       <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-8">
         <h2 className="font-serif-display text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
           <AlertTriangle className="w-5 h-5 text-red-500" />
-          Pièges à éviter à l&apos;examen
+          Pièges à éviter
         </h2>
         <ul className="space-y-2">
           {fiche.pieges.map((p, i) => (
