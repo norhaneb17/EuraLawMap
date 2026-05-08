@@ -82,6 +82,17 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
             </a>
           </div>
 
+          {/* PS — Breaking news note */}
+          {regulation.psNote && (
+            <div className="mb-6 bg-amber-50 border border-amber-300 rounded-xl px-5 py-4">
+              <p className="text-xs font-bold text-amber-700 uppercase tracking-widest mb-2">📌 PS — Actualité récente</p>
+              <div
+                className="text-amber-900 text-sm leading-relaxed prose prose-sm max-w-none [&_ul]:mt-2 [&_li]:my-1"
+                dangerouslySetInnerHTML={{ __html: regulation.psNote }}
+              />
+            </div>
+          )}
+
           {/* Tabs */}
           <div className="flex gap-0 border-b border-navy-800 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 overflow-x-auto">
             {tabs.map((tab) => (

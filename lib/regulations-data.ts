@@ -22,6 +22,7 @@ export interface RegulationData {
   link: string;
   updatedAt: string; // ISO date string, e.g. "2025-04-29"
   sanctionsIntro?: string; // Optional intro note displayed above sanctions list
+  psNote?: string; // Optional "breaking news" note displayed prominently on the regulation page
 }
 
 export const regulationsData: RegulationData[] = [
@@ -477,11 +478,14 @@ export const regulationsData: RegulationData[] = [
       { date: "1er août 2024", event: "Entrée en vigueur" },
       { date: "2 fév. 2025", event: "Interdiction des pratiques d'IA à risque inacceptable" },
       { date: "2 août 2025", event: "Obligations pour les modèles GPAI, désignation des autorités nationales" },
-      { date: "2 août 2026", event: "Application complète pour les systèmes à haut risque (annexe III)" },
-      { date: "2 août 2027", event: "Application aux systèmes intégrés dans des produits réglementés" },
+      { date: "2 déc. 2026", event: "⚠️ [Accord provisoire] Report de l'obligation de détection et de marquage des contenus générés par IA (art. 50§2)" },
+      { date: "2 août 2026", event: "Application complète pour les systèmes à haut risque (annexe III) — date en vigueur aujourd'hui" },
+      { date: "2 déc. 2027", event: "⚠️ [Accord provisoire] Nouvelle date d'application pour les systèmes à haut risque (annexe III)" },
+      { date: "2 août 2028", event: "⚠️ [Accord provisoire] Nouvelle date d'application pour les systèmes à haut risque (annexe I)" },
     ],
+    psNote: "🔴 Accord politique provisoire — mai 2026 : les institutions européennes ont annoncé un accord sur des amendements à l'AI Act. La loi n'est pas encore formellement modifiée, mais plusieurs changements importants sont attendus : <ul style=\"list-style-type:disc;padding-left:1.25rem;margin-top:0.5rem;\"><li><strong>Report des délais d'application pour les systèmes à haut risque</strong> : la date du 2 août 2026 (annexe III) serait repoussée au 2 décembre 2027 ; celle de l'annexe I au 2 août 2028.</li><li><strong>Nouvelles pratiques interdites</strong> : les systèmes d'IA capables de générer des contenus sexuels non consentis ou des contenus pédopornographiques (CSAM) seraient ajoutés à la liste des pratiques interdites (art. 5).</li><li><strong>Report du marquage des contenus génératifs</strong> : l'obligation de détection et de filigranage des sorties IA (art. 50§2) serait repoussée au 2 décembre 2026.</li><li><strong>Traitement des données sensibles pour la détection des biais</strong> : la portée serait élargie pour permettre aux organisations de traiter des données personnelles sensibles dans le cadre de la détection et correction des biais, sous conditions strictes.</li></ul><em>Ces modifications font l'objet d'un accord politique ; elles doivent encore être formellement adoptées avant la date d'applicabilité du 2 août 2026.</em>",
     link: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R1689",
-    updatedAt: "2025-04-29",
+    updatedAt: "2026-05-08",
   },
   {
     id: "dora",
