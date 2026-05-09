@@ -53,6 +53,46 @@ const mockFiches = [
     regulation: "NIS2",
     cat: "Cybersécurité",
   },
+  {
+    slug: "rgpd-droits-personnes",
+    title: "Les droits des personnes concernées (RGPD)",
+    excerpt: "Droit d'accès, de rectification, d'effacement, de portabilité et d'opposition : conditions d'exercice, délais et limites de chaque droit.",
+    tags: ["RGPD", "Droits", "Personnes concernées"],
+    regulation: "RGPD",
+    cat: "Données",
+  },
+  {
+    slug: "rgpd-responsable-sous-traitant",
+    title: "Responsable de traitement et sous-traitant (RGPD)",
+    excerpt: "Distinction fondamentale entre responsable et sous-traitant, obligation de DPA (article 28) et régime de co-responsabilité (article 26).",
+    tags: ["RGPD", "Responsable", "Sous-traitant"],
+    regulation: "RGPD",
+    cat: "Données",
+  },
+  {
+    slug: "dsa-vlop-obligations",
+    title: "Les obligations des très grandes plateformes (VLOP)",
+    excerpt: "Évaluation des risques systémiques, audit indépendant, transparence algorithmique et supervision directe par la Commission européenne.",
+    tags: ["DSA", "VLOP", "Plateformes"],
+    regulation: "DSA",
+    cat: "Plateformes",
+  },
+  {
+    slug: "ai-act-interdictions",
+    title: "Les pratiques d'IA interdites (article 5 AI Act)",
+    excerpt: "Les 8 catégories de pratiques prohibées : manipulation subliminale, social scoring, identification biométrique en temps réel, inférence des émotions.",
+    tags: ["AI Act", "Interdictions", "Droits fondamentaux"],
+    regulation: "AI Act",
+    cat: "IA",
+  },
+  {
+    slug: "ai-act-gpai",
+    title: "Les modèles d'IA à usage général (GPAI)",
+    excerpt: "Régime spécifique des grands modèles de langage (GPT, Claude, Gemini) : deux niveaux d'obligations selon le seuil de 10²⁵ FLOPs.",
+    tags: ["AI Act", "GPAI", "LLM"],
+    regulation: "AI Act",
+    cat: "IA",
+  },
 ];
 
 const ALL_REGULATIONS = ["Tous", ...Array.from(new Set(mockFiches.map((f) => f.regulation)))];
