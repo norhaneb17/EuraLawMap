@@ -125,7 +125,7 @@ export default function FichesPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
       <div className="mb-8">
-        <p className="text-xs font-semibold tracking-widest uppercase text-gold-600 mb-2">Ressources</p>
+        <p className="text-xs font-medium text-gold-600 mb-2">Ressources</p>
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 mb-3">
           Fiches thématiques
         </h1>

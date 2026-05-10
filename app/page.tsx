@@ -40,7 +40,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-navy-950 border-b border-navy-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <p className="text-navy-400 text-xs font-medium tracking-wide uppercase mb-5">
+          <p className="text-navy-400 text-xs font-medium mb-5">
             Droit européen du numérique
           </p>
           <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl">

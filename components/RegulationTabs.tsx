@@ -58,7 +58,7 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
             </span>
           </div>
 
-          <p className="text-navy-400 text-xs font-semibold tracking-widest uppercase mb-1">
+          <p className="text-navy-400 text-xs font-medium mb-1">
             {regulation.type}
           </p>
           <h1 className="font-serif-display text-3xl md:text-4xl font-bold mb-1">
@@ -120,15 +120,15 @@ export default function RegulationTabs({ regulation }: { regulation: RegulationD
         {activeTab === "apercu" && (
           <div className="space-y-8">
             <section>
-              <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Contexte</h2>
+              <h2 className="text-xs font-semibold text-gray-400 mb-3">Contexte</h2>
               <div className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: regulation.context }} />
             </section>
             <section>
-              <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Champ d&apos;application</h2>
+              <h2 className="text-xs font-semibold text-gray-400 mb-3">Champ d&apos;application</h2>
               <div className="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-sm max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: regulation.champ }} />
             </section>
             <section>
-              <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Acteurs concernés</h2>
+              <h2 className="text-xs font-semibold text-gray-400 mb-3">Acteurs concernés</h2>
               <div className="flex flex-wrap gap-2">
                 {regulation.actors.map((actor, i) => (
                   <span
