@@ -8,6 +8,7 @@ import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
   { href: "/reglements", label: "Règlements" },
+  { href: "/cartographie", label: "Cartographie" },
   { href: "/fiches", label: "Fiches" },
   { href: "/glossaire", label: "Glossaire" },
   { href: "/quiz", label: "Quiz" },
