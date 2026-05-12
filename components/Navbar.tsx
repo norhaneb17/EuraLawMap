@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/reglements", label: "Règlements" },
   { href: "/fiches", label: "Fiches" },
   { href: "/glossaire", label: "Glossaire" },
-  { href: "/assistant", label: "Assistant IA" },
   { href: "/quiz", label: "Quiz" },
 ];
 

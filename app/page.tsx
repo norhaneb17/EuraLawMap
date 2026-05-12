@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, FileText, Brain, MessageSquare, Trophy } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Brain, Trophy } from "lucide-react";
 import RegulationCard from "@/components/RegulationCard";
 import { regulationsData } from "@/lib/regulations-data";
 import { mockStats } from "@/lib/mock-data";
@@ -17,13 +17,6 @@ const features = [
     desc: "Des synthèses claires sur les notions-clés du droit européen du numérique, organisées par thème.",
     href: "/fiches",
     cta: "Parcourir les fiches",
-  },
-  {
-    icon: MessageSquare,
-    title: "Assistant IA",
-    desc: "Posez vos questions à un assistant spécialisé en droit européen du numérique, disponible 24h/24.",
-    href: "/assistant",
-    cta: "Interroger l'assistant",
   },
   {
     icon: Trophy,
@@ -49,7 +42,7 @@ export default function HomePage() {
           </h1>
           <p className="text-navy-300 text-lg leading-relaxed max-w-2xl mb-3 border-l-2 border-navy-700 pl-4">
             DSA, DMA, AI Act, RGPD, DGA et plus — des fiches de synthèse, un glossaire juridique
-            et un assistant IA pour maîtriser les textes européens.
+            et un quiz pour maîtriser les textes européens.
           </p>
           <p className="text-navy-500 text-sm mb-10 pl-4">15 règlements · Contenu mis à jour en 2026</p>
           <div className="flex flex-wrap gap-4">
@@ -115,7 +108,7 @@ export default function HomePage() {
               Tout pour comprendre et réviser
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {features.map((f) => (
               <div
                 key={f.title}

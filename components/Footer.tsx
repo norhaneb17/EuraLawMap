@@ -23,7 +23,6 @@ export default function Footer() {
                 { href: "/reglements", label: "Règlements" },
                 { href: "/fiches", label: "Fiches thématiques" },
                 { href: "/glossaire", label: "Glossaire" },
-                { href: "/assistant", label: "Assistant IA" },
                 { href: "/quiz", label: "Quiz" },
               ].map((link) => (
                 <li key={link.href}>
