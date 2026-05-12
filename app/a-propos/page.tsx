@@ -1,4 +1,4 @@
-import { FileText, BookOpen, Brain, Trophy, AlertCircle } from "lucide-react";
+import { FileText, Brain, Trophy, AlertCircle } from "lucide-react";
 
 const contents = [
   { icon: FileText, label: "15 règlements européens du numérique, analysés et mis à jour" },
@@ -14,10 +14,10 @@ export default function AProposPage() {
       {/* Header */}
       <div className="mb-12">
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 dark:text-white mb-4">
-          À propos d'EuraLexMap
+          À propos d&apos;EuraLexMap
         </h1>
         <p className="text-lg text-navy-400 dark:text-gray-400 leading-relaxed border-l-2 border-navy-200 dark:border-navy-700 pl-4">
-          Un projet né d'un constat simple : le droit européen du numérique est dense, technique
+          Un projet né d&apos;un constat simple : le droit européen du numérique est dense, technique
           et en constante évolution, mais il concerne tout le monde.
         </p>
       </div>
@@ -26,25 +26,25 @@ export default function AProposPage() {
       <div className="space-y-6 text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-14">
         <p>
           Je suis <strong className="text-navy-900 dark:text-white font-semibold">Norhane Boureghda</strong>,
-          étudiante en droit en master 2 de Droit du numérique, et j'ai créé EuraLexMap pour répondre
-          à un besoin que j'ai moi-même ressenti : avoir un espace clair, structuré et fiable pour
-          naviguer dans l'écosystème réglementaire européen du numérique.
+          étudiante en droit en master 2 de Droit du numérique, et j&apos;ai créé EuraLexMap pour répondre
+          à un besoin que j&apos;ai moi-même ressenti : avoir un espace clair, structuré et fiable pour
+          naviguer dans l&apos;écosystème réglementaire européen du numérique.
         </p>
         <p>
           Le droit du numérique européen — DSA, DMA, AI Act, RGPD, NIS2 et les autres — est en train
           de remodeler profondément les pratiques des entreprises, des plateformes et des professionnels
-          du droit. Ces textes sont publics, mais leur lecture reste difficile d'accès pour qui n'est
+          du droit. Ces textes sont publics, mais leur lecture reste difficile d&apos;accès pour qui n&apos;est
           pas rompu à la rédaction législative européenne.
         </p>
         <p>
           EuraLexMap est ma façon de prendre en main ces outils : construire une plateforme pédagogique
-          structurée, intégrer des technologies d'IA pour enrichir l'expérience, et contribuer à rendre
+          structurée, intégrer des technologies d&apos;IA pour enrichir l&apos;expérience, et contribuer à rendre
           ce corpus juridique plus lisible pour les étudiants, les juristes et les professionnels concernés.
         </p>
         <p>
-          Ce projet est aussi une démonstration personnelle que les outils d'intelligence artificielle
-          peuvent être mis au service d'une pratique juridique rigoureuse — non pas pour remplacer le
-          raisonnement juridique, mais pour l'amplifier.
+          Ce projet est aussi une démonstration personnelle que les outils d&apos;intelligence artificielle
+          peuvent être mis au service d&apos;une pratique juridique rigoureuse — non pas pour remplacer le
+          raisonnement juridique, mais pour l&apos;amplifier.
         </p>
       </div>
 
