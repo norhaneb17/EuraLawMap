@@ -24,6 +24,7 @@ export default function Footer() {
                 { href: "/fiches", label: "Fiches thématiques" },
                 { href: "/glossaire", label: "Glossaire" },
                 { href: "/quiz", label: "Quiz" },
+                { href: "/a-propos", label: "À propos" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-navy-400 hover:text-gold-400 text-sm transition-colors">

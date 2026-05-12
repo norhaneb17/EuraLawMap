@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/fiches", label: "Fiches" },
   { href: "/glossaire", label: "Glossaire" },
   { href: "/quiz", label: "Quiz" },
+  { href: "/a-propos", label: "À propos" },
 ];
 
 export default function Navbar() {
