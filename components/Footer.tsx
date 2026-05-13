@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <div className="flex flex-col leading-none">
-                <span className="text-white font-bold tracking-widest text-sm uppercase">EuraLex<span className="text-gold-400">Map</span></span>
+                <span className="text-white font-bold tracking-widest text-sm uppercase">Lega<span className="text-gold-400">mapex</span></span>
                 <span className="text-navy-500 text-[10px] tracking-widest uppercase font-medium mt-0.5">Droit du numérique européen</span>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-navy-800 mt-8 pt-6 text-center text-navy-500 text-xs">
-          © {new Date().getFullYear()} EuraLexMap — Compilation de textes juridiques européens à visée pédagogique. Ne constitue pas un avis juridique.
+          © {new Date().getFullYear()} Legamapex — Compilation de textes juridiques européens à visée pédagogique. Ne constitue pas un avis juridique.
         </div>
       </div>
     </footer>

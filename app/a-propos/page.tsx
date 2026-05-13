@@ -14,7 +14,7 @@ export default function AProposPage() {
       {/* Header */}
       <div className="mb-12">
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 dark:text-white mb-4">
-          À propos d&apos;EuraLexMap
+          À propos d&apos;Legamapex
         </h1>
         <p className="text-lg text-navy-400 dark:text-gray-400 leading-relaxed border-l-2 border-navy-200 dark:border-navy-700 pl-4">
           Un projet né d&apos;un constat simple : le droit européen du numérique est dense, technique
@@ -26,7 +26,7 @@ export default function AProposPage() {
       <div className="space-y-6 text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-14">
         <p>
           Je suis <strong className="text-navy-900 dark:text-white font-semibold">Norhane Boureghda</strong>,
-          étudiante en droit en master 2 de Droit du numérique, et j&apos;ai créé EuraLexMap pour répondre
+          étudiante en droit en master 2 de Droit du numérique, et j&apos;ai créé Legamapex pour répondre
           à un besoin que j&apos;ai moi-même ressenti : avoir un espace clair, structuré et fiable pour
           naviguer dans l&apos;écosystème réglementaire européen du numérique.
         </p>
@@ -37,7 +37,7 @@ export default function AProposPage() {
           pas rompu à la rédaction législative européenne.
         </p>
         <p>
-          EuraLexMap est ma façon de prendre en main ces outils : construire une plateforme pédagogique
+          Legamapex est ma façon de prendre en main ces outils : construire une plateforme pédagogique
           structurée, intégrer des technologies d&apos;IA pour enrichir l&apos;expérience, et contribuer à rendre
           ce corpus juridique plus lisible pour les étudiants, les juristes et les professionnels concernés.
         </p>
@@ -69,7 +69,7 @@ export default function AProposPage() {
       <div className="flex gap-3 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-xl px-5 py-4">
         <AlertCircle className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-          EuraLexMap est un projet à visée pédagogique. Le contenu de ce site ne constitue pas un
+          Legamapex est un projet à visée pédagogique. Le contenu de ce site ne constitue pas un
           avis juridique. Pour toute question spécifique, consultez un professionnel du droit.
         </p>
       </div>

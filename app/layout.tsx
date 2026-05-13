@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "EuraLexMap — Droit européen du numérique",
+  title: "Legamapex — Droit européen du numérique",
   description:
     "Cartographiez le droit européen du numérique : DSA, DMA, AI Act, RGPD, DGA et plus. Fiches, glossaire et assistant IA pour étudiants en droit.",
 };
@@ -21,7 +21,7 @@ export default function RootLayout({
         {/* Blocking script: applies dark class before first paint to avoid flash */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('euralexmap_theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('legamapex_theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();`,
           }}
         />
       </head>

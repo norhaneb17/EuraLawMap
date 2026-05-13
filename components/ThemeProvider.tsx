@@ -24,7 +24,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
 
   // Keep state in sync if system preference changes and no saved preference
   useEffect(() => {
-    const saved = localStorage.getItem("euralexmap_theme");
+    const saved = localStorage.getItem("legamapex_theme");
     if (saved) return; // user has explicit preference — don't override
 
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -40,7 +40,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
   const toggle = () => {
     setTheme((prev) => {
       const next: Theme = prev === "light" ? "dark" : "light";
-      localStorage.setItem("euralexmap_theme", next);
+      localStorage.setItem("legamapex_theme", next);
       document.documentElement.classList.toggle("dark", next === "dark");
       return next;
     });

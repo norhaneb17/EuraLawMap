@@ -229,7 +229,7 @@ function getScoreLabel(pct: number) {
   return { label: "À retravailler 📚", color: "text-red-600" };
 }
 
-const STORAGE_KEY = "euralexmap_quiz_best";
+const STORAGE_KEY = "legamapex_quiz_best";
 
 export default function QuizPage() {
   const [current, setCurrent] = useState(0);
