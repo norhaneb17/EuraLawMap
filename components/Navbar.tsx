@@ -7,7 +7,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
-  { href: "/reglements", label: "Règlements" },
+  { href: "/reglements", label: "Textes" },
   { href: "/cartographie", label: "Cartographie" },
   { href: "/fiches", label: "Fiches" },
   { href: "/glossaire", label: "Glossaire" },

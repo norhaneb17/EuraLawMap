@@ -20,7 +20,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm mb-3">Navigation</h4>
             <ul className="space-y-2">
               {[
-                { href: "/reglements", label: "Règlements" },
+                { href: "/reglements", label: "Textes" },
                 { href: "/cartographie", label: "Cartographie" },
                 { href: "/fiches", label: "Fiches thématiques" },
                 { href: "/glossaire", label: "Glossaire" },
