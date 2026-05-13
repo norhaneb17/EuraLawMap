@@ -31,10 +31,10 @@ export default function ReglementsPage() {
       <div className="mb-8">
         <p className="text-xs font-medium text-gold-600 mb-2">Textes de référence</p>
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 mb-3">
-          Règlements européens
+          Textes européens
         </h1>
         <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
-          Les principaux textes réglementaires européens en matière de droit du numérique.
+          Les principaux règlements et directives européens en matière de droit du numérique.
         </p>
       </div>
 
@@ -45,7 +45,7 @@ export default function ReglementsPage() {
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
             type="text"
-            placeholder="Rechercher un règlement…"
+            placeholder="Rechercher un texte…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-300 focus:border-navy-300 bg-white dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500"
@@ -72,13 +72,13 @@ export default function ReglementsPage() {
 
       {/* Count */}
       <p className="text-xs text-gray-400 dark:text-gray-500 mb-6">
-        {filtered.length} règlement{filtered.length !== 1 ? "s" : ""} affiché{filtered.length !== 1 ? "s" : ""}
+        {filtered.length} texte{filtered.length !== 1 ? "s" : ""} affiché{filtered.length !== 1 ? "s" : ""}
       </p>
 
       {/* Grid */}
       {filtered.length === 0 ? (
         <div className="text-center py-16 text-gray-400 dark:text-gray-500">
-          <p className="text-sm">Aucun règlement ne correspond à votre recherche.</p>
+          <p className="text-sm">Aucun texte ne correspond à votre recherche.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

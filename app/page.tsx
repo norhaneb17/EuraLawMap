@@ -44,7 +44,7 @@ export default function HomePage() {
             DSA, DMA, AI Act, RGPD, DGA et plus — des fiches de synthèse, un glossaire juridique
             et un quiz pour maîtriser les textes européens.
           </p>
-          <p className="text-navy-500 text-sm mb-10 pl-4">15 règlements · Contenu mis à jour en 2026</p>
+          <p className="text-navy-500 text-sm mb-10 pl-4">15 textes · Contenu mis à jour en 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/reglements"
@@ -82,7 +82,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="font-serif-display text-2xl md:text-3xl font-bold text-navy-950 dark:text-white">
-              Règlements européens
+              Textes européens
             </h2>
             <p className="text-navy-400 text-sm mt-1">15 textes de référence du droit du numérique</p>
           </div>
