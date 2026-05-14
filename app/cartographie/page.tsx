@@ -127,24 +127,51 @@ const initialNodes: RegulationNode[] = [
 
 // ─── Edges ────────────────────────────────────────────────────────────────────
 
+const edgeDefaults = {
+  type: "smoothstep" as const,
+  style: { stroke: "#94A3B8", strokeWidth: 1.5, strokeDasharray: "6 3" },
+  labelStyle: { fontSize: 9.5, fill: "#374151", fontWeight: 500 },
+  labelBgStyle: { fill: "#ffffff", fillOpacity: 0.9 },
+  labelBgPadding: [5, 3] as [number, number],
+  labelBgBorderRadius: 4,
+};
+
 const initialEdges: Edge[] = [
-  // DONNÉES — intra-groupe
-  { id: "e-rgpd-dga",      source: "rgpd",      sourceHandle: "s-bottom", target: "dga",       targetHandle: "t-top",    type: "smoothstep", style: { stroke: "#93C5FD", strokeWidth: 1.5 } },
-  { id: "e-rgpd-dataact",  source: "rgpd",      sourceHandle: "s-bottom", target: "dataact",   targetHandle: "t-top",    type: "smoothstep", style: { stroke: "#93C5FD", strokeWidth: 1.5 } },
-  { id: "e-dga-dataact",   source: "dga",       sourceHandle: "s-right",  target: "dataact",   targetHandle: "t-left",   type: "smoothstep", style: { stroke: "#93C5FD", strokeWidth: 1.5 } },
-  // PLATEFORMES — intra-groupe
-  { id: "e-dsa-dma",       source: "dsa",       sourceHandle: "s-right",  target: "dma",       targetHandle: "t-top",    type: "smoothstep", style: { stroke: "#C4B5FD", strokeWidth: 1.5 } },
-  { id: "e-dma-p2b",       source: "dma",       sourceHandle: "s-bottom", target: "p2b",       targetHandle: "t-right",  type: "smoothstep", style: { stroke: "#C4B5FD", strokeWidth: 1.5 } },
-  // CYBERSÉCURITÉ — intra-groupe
-  { id: "e-nis2-cra",      source: "nis2",      sourceHandle: "s-right",  target: "cra",       targetHandle: "t-top",    type: "smoothstep", style: { stroke: "#FDBA74", strokeWidth: 1.5 } },
-  { id: "e-nis2-csa",      source: "nis2",      sourceHandle: "s-bottom", target: "csa",       targetHandle: "t-top",    type: "smoothstep", style: { stroke: "#FDBA74", strokeWidth: 1.5 } },
-  { id: "e-cra-csa",       source: "cra",       sourceHandle: "s-left",   target: "csa",       targetHandle: "t-right",  type: "smoothstep", style: { stroke: "#FDBA74", strokeWidth: 1.5 } },
-  // Croisements inter-groupes
-  { id: "e-aiact-rgpd",    source: "aiact",     sourceHandle: "s-left",   target: "rgpd",      targetHandle: "t-right",  type: "smoothstep", style: { stroke: "#86EFAC", strokeWidth: 1.5, strokeDasharray: "5 3" } },
-  { id: "e-aiact-dsa",     source: "aiact",     sourceHandle: "s-right",  target: "dsa",       targetHandle: "t-left",   type: "smoothstep", style: { stroke: "#86EFAC", strokeWidth: 1.5, strokeDasharray: "5 3" } },
-  { id: "e-dora-nis2",     source: "dora",      sourceHandle: "s-right",  target: "nis2",      targetHandle: "t-left",   type: "smoothstep", style: { stroke: "#FCD34D", strokeWidth: 1.5, strokeDasharray: "5 3" } },
-  { id: "e-eidas2-rgpd",   source: "eidas2",    sourceHandle: "s-top",    target: "rgpd",      targetHandle: "t-bottom", type: "smoothstep", style: { stroke: "#CBD5E1", strokeWidth: 1.5, strokeDasharray: "5 3" } },
-  { id: "e-eprivacy-rgpd", source: "eprivacy",  sourceHandle: "s-top",    target: "rgpd",      targetHandle: "t-bottom", type: "smoothstep", style: { stroke: "#CBD5E1", strokeWidth: 1.5, strokeDasharray: "5 3" } },
+  {
+    id: "e-aiact-rgpd",
+    source: "aiact", sourceHandle: "s-left",
+    target: "rgpd",  targetHandle: "t-right",
+    label: "Les systèmes d'IA traitent souvent des données personnelles",
+    ...edgeDefaults,
+  },
+  {
+    id: "e-aiact-dsa",
+    source: "aiact", sourceHandle: "s-right",
+    target: "dsa",   targetHandle: "t-left",
+    label: "Obligations de transparence algorithmique communes",
+    ...edgeDefaults,
+  },
+  {
+    id: "e-dora-nis2",
+    source: "dora", sourceHandle: "s-right",
+    target: "nis2", targetHandle: "t-left",
+    label: "DORA est la lex specialis de NIS 2 pour le secteur financier",
+    ...edgeDefaults,
+  },
+  {
+    id: "e-eidas2-rgpd",
+    source: "eidas2", sourceHandle: "s-top",
+    target: "rgpd",   targetHandle: "t-bottom",
+    label: "Le portefeuille d'identité traite des données personnelles",
+    ...edgeDefaults,
+  },
+  {
+    id: "e-eprivacy-rgpd",
+    source: "eprivacy", sourceHandle: "s-top",
+    target: "rgpd",     targetHandle: "t-bottom",
+    label: "ePrivacy est la lex specialis du RGPD pour les communications",
+    ...edgeDefaults,
+  },
 ];
 
 // ─── Legend data ──────────────────────────────────────────────────────────────
@@ -201,7 +228,7 @@ export default function CartographiePage() {
 
           {/* Legend */}
           <Panel position="bottom-left">
-            <div className="bg-white border border-gray-200 rounded-xl p-3 shadow-sm mb-2 ml-2">
+            <div className="bg-white border border-gray-200 rounded-xl p-3 shadow-sm mb-2 ml-2" style={{ maxWidth: 200 }}>
               <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-2">Groupes thématiques</p>
               <div className="flex flex-col gap-1.5">
                 {legend.map((g) => (
@@ -213,14 +240,10 @@ export default function CartographiePage() {
                     <span className="text-xs text-gray-600">{g.label}</span>
                   </div>
                 ))}
-                <div className="border-t border-gray-100 mt-1 pt-1.5 flex flex-col gap-1">
-                  <div className="flex items-center gap-2">
-                    <svg width="18" height="6"><line x1="0" y1="3" x2="18" y2="3" stroke="#94A3B8" strokeWidth="1.5" /></svg>
-                    <span className="text-[10px] text-gray-400">Lien intra-groupe</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg width="18" height="6"><line x1="0" y1="3" x2="18" y2="3" stroke="#94A3B8" strokeWidth="1.5" strokeDasharray="4 2" /></svg>
-                    <span className="text-[10px] text-gray-400">Lien inter-groupe</span>
+                <div className="border-t border-gray-100 mt-2 pt-2">
+                  <div className="flex items-start gap-2">
+                    <svg width="18" height="6" className="flex-shrink-0 mt-1"><line x1="0" y1="3" x2="18" y2="3" stroke="#94A3B8" strokeWidth="1.5" strokeDasharray="4 2" /></svg>
+                    <span className="text-[10px] text-gray-400 leading-tight">Articulation juridique entre textes de domaines différents</span>
                   </div>
                 </div>
               </div>
