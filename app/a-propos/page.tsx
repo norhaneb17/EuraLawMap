@@ -19,12 +19,12 @@ export default function AProposPage() {
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 dark:text-white mb-6 leading-tight">
           À propos de Legamapex
         </h1>
-        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+        <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
           RGPD, DSA, DMA, AI Act, NIS2, Data Act… Ces textes transforment la manière dont le
           numérique est encadré en Europe. Mais entre EUR-Lex, des PDF de centaines de pages et
           une terminologie ultra-technique, y voir clair relève souvent du défi.
         </p>
-        <p className="text-base md:text-lg font-semibold text-navy-900 dark:text-white border-l-4 border-gold-400 pl-4">
+        <p className="text-base font-semibold text-navy-900 dark:text-white border-l-4 border-gold-400 pl-4">
           Legamapex est là pour simplifier tout ça.
         </p>
       </div>
