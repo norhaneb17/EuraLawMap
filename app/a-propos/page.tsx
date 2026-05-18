@@ -21,8 +21,9 @@ export default function AProposPage() {
         </h1>
         <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
           RGPD, DSA, DMA, AI Act, NIS2, Data Act… Ces textes transforment la manière dont le
-          numérique est encadré en Europe. Mais entre EUR-Lex, des PDF de centaines de pages et
-          une terminologie ultra-technique, y voir clair relève souvent du défi.
+          numérique est encadré en Europe. Les comprendre, en revanche, est une autre affaire :
+          des sources dispersées, une terminologie ultra-technique, et peu d&apos;outils pensés
+          pour les rendre compréhensibles.
         </p>
         <p className="text-base font-semibold text-navy-900 dark:text-white border-l-4 border-gold-400 pl-4">
           Legamapex est là pour simplifier tout ça.
@@ -32,9 +33,9 @@ export default function AProposPage() {
       {/* Intro */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
         <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
-          La plateforme centralise les grandes réglementations européennes du numérique et les rend
-          accessibles. Que vous soyez étudiant en droit ou simplement concerné par les règles qui
-          encadrent votre quotidien numérique.
+          La plateforme regroupe les principaux textes européens du numérique sous forme de fiches.
+          Elle met à disposition des fiches thématiques, un glossaire, une centaine de concepts,
+          et un quiz pour tester ses connaissances.
         </p>
       </div>
 
@@ -70,14 +71,6 @@ export default function AProposPage() {
         </div>
       </div>
 
-      {/* IA note */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
-          Le droit du numérique bouge vite. Legamapex aussi — le site est construit avec des outils
-          d&apos;intelligence artificielle et pensé pour évoluer au rythme de son domaine.
-        </p>
-      </div>
-
       {/* Qui suis-je */}
       <div className="bg-gray-50 dark:bg-gray-800/40 border-y border-gray-100 dark:border-gray-800 py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +83,6 @@ export default function AProposPage() {
                 Qui suis-je ?
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
-                Je suis{" "}
                 <strong className="text-navy-900 dark:text-white font-semibold">
                   Norhane Boureghda
                 </strong>
