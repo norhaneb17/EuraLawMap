@@ -5,7 +5,7 @@ import { Search } from "lucide-react";
 import RegulationCard from "@/components/RegulationCard";
 import { regulationsData } from "@/lib/regulations-data";
 
-const categories = ["Tous", "Données", "Plateformes", "Cybersécurité", "IA", "Finance", "Identité", "Droits num."];
+const categories = ["Tous", "Données", "Plateformes", "Cybersécurité", "IA", "Finance", "Identité", "Prop. intell.", "ePrivacy"];
 
 export default function ReglementsPage() {
   const [activeCat, setActiveCat] = useState("Tous");

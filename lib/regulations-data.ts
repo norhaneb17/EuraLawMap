@@ -633,7 +633,7 @@ export const regulationsData: RegulationData[] = [
   {
     id: "copyright",
     badge: "Dir. ©",
-    cat: "Droits num.",
+    cat: "Prop. intell.",
     name: "Droit d'auteur numérique",
     ref: "Directive (UE) 2019/790",
     type: "Directive",
@@ -675,7 +675,7 @@ export const regulationsData: RegulationData[] = [
   {
     id: "eprivacy",
     badge: "ePrivacy",
-    cat: "Droits num.",
+    cat: "ePrivacy",
     name: "Vie privée et communications",
     ref: "Directive 2002/58/CE",
     type: "Directive",

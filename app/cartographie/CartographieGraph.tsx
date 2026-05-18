@@ -28,7 +28,9 @@ const G = {
   cyber:       { bg: "#FFF7ED", border: "#F97316", text: "#C2410C", label: "Cybersécurité" },
   ia:          { bg: "#F0FDF4", border: "#22C55E", text: "#15803D", label: "Intelligence artificielle" },
   finance:     { bg: "#FFFBEB", border: "#F59E0B", text: "#92400E", label: "Finance & crypto" },
-  identite:    { bg: "#F8FAFC", border: "#94A3B8", text: "#475569", label: "Identité & droits numériques" },
+  identite:    { bg: "#F8FAFC", border: "#94A3B8", text: "#475569", label: "Identité numérique" },
+  propintell:  { bg: "#FFF1F2", border: "#F43F5E", text: "#BE123C", label: "Propriété intellectuelle" },
+  eprivacy:    { bg: "#F0FDFA", border: "#14B8A6", text: "#0F766E", label: "ePrivacy" },
 };
 
 // ─── Custom nodes ─────────────────────────────────────────────────────────────
@@ -107,7 +109,9 @@ const initialNodes: (RegulationNode | GroupNodeType)[] = [
   { id: "grp-plateformes", type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 790, y: 18  }, style: { width: 380, height: 310 }, data: { ...G.plateformes,  color: G.plateformes.text  } },
   { id: "grp-cyber",       type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 880, y: 415 }, style: { width: 400, height: 295 }, data: { ...G.cyber,        color: G.cyber.text        } },
   { id: "grp-finance",     type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 600, y: 418 }, style: { width: 215, height: 270 }, data: { ...G.finance,      color: G.finance.text      } },
-  { id: "grp-identite",    type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 20,  y: 415 }, style: { width: 445, height: 270 }, data: { ...G.identite,     color: G.identite.text     } },
+  { id: "grp-identite",    type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 110, y: 415 }, style: { width: 210, height: 115 }, data: { ...G.identite,    color: G.identite.text    } },
+  { id: "grp-propintell",  type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 240, y: 545 }, style: { width: 210, height: 115 }, data: { ...G.propintell,  color: G.propintell.text  } },
+  { id: "grp-eprivacy",    type: "groupNode", zIndex: -1, selectable: false, draggable: false, position: { x: 15,  y: 545 }, style: { width: 210, height: 115 }, data: { ...G.eprivacy,    color: G.eprivacy.text    } },
 
   // Données
   { id: "rgpd",      type: "regulation", position: { x: 145, y: 105 }, data: { acronym: "RGPD",      name: "Protection des données",            href: "/reglement/rgpd",        ...G.donnees } },
@@ -132,9 +136,9 @@ const initialNodes: (RegulationNode | GroupNodeType)[] = [
   { id: "mica",      type: "regulation", position: { x: 617, y: 575 }, data: { acronym: "MiCA",      name: "Marchés de crypto-actifs",          href: "/reglement/mica",        ...G.finance } },
 
   // Identité & droits num.
-  { id: "eidas2",    type: "regulation", position: { x: 148, y: 455 }, data: { acronym: "eIDAS 2",   name: "Identité numérique",               href: "/reglement/eidas2",      ...G.identite } },
-  { id: "copyright", type: "regulation", position: { x: 270, y: 570 }, data: { acronym: "Dir. ©",    name: "Droit d’auteur numérique",     href: "/reglement/copyright",   ...G.identite } },
-  { id: "eprivacy",  type: "regulation", position: { x: 30,  y: 570 }, data: { acronym: "ePrivacy",  name: "Vie privée et communications",      href: "/reglement/eprivacy",    ...G.identite } },
+  { id: "eidas2",    type: "regulation", position: { x: 148, y: 448 }, data: { acronym: "eIDAS 2",   name: "Identité numérique",           href: "/reglement/eidas2",    ...G.identite   } },
+  { id: "copyright", type: "regulation", position: { x: 253, y: 573 }, data: { acronym: "Dir. ©",    name: "Droit d’auteur numérique",     href: "/reglement/copyright", ...G.propintell  } },
+  { id: "eprivacy",  type: "regulation", position: { x: 28,  y: 573 }, data: { acronym: "ePrivacy",  name: "Vie privée et communications", href: "/reglement/eprivacy",  ...G.eprivacy    } },
 ];
 
 // ─── Edges ────────────────────────────────────────────────────────────────────
