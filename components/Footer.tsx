@@ -13,7 +13,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-navy-400 text-sm">
-              La plateforme de référence pour comprendre le droit européen du numérique.
+              La plateforme pour comprendre le droit européen du numérique.
             </p>
           </div>
           <div>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-navy-800 mt-8 pt-6 text-center text-navy-500 text-xs">
-          © {new Date().getFullYear()} Legamapex — Compilation de textes juridiques européens à visée pédagogique. Ne constitue pas un avis juridique.
+          © {new Date().getFullYear()} Legamapex — Compilation des textes juridiques européens à visée pédagogique. Ne constitue pas un avis juridique.
         </div>
       </div>
     </footer>
