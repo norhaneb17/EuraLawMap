@@ -1,76 +1,80 @@
-import { FileText, Brain, Trophy, AlertCircle } from "lucide-react";
-
-const contents = [
-  { icon: FileText, label: "15 règlements européens du numérique, analysés et mis à jour" },
-  { icon: FileText, label: "11 fiches thématiques sur les notions-clés" },
-  { icon: Brain, label: "Un glossaire de 120 concepts définis et référencés par article" },
-  { icon: Trophy, label: "Un quiz interactif pour tester ses connaissances" },
-];
+import { AlertCircle } from "lucide-react";
 
 export default function AProposPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
       {/* Header */}
-      <div className="mb-12">
+      <div className="mb-10">
         <h1 className="font-serif-display text-3xl md:text-4xl font-bold text-navy-950 dark:text-white mb-4">
-          À propos d&apos;Legamapex
+          À propos de Legamapex
         </h1>
-        <p className="text-lg text-navy-400 dark:text-gray-400 leading-relaxed border-l-2 border-navy-200 dark:border-navy-700 pl-4">
-          Un projet né d&apos;un constat simple : le droit européen du numérique est dense, technique
-          et en constante évolution, mais il concerne tout le monde.
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          RGPD, DSA, DMA, AI Act, NIS2, Data Act… Ces textes transforment la manière dont le numérique
+          est encadré en Europe. Mais entre EUR-Lex, des PDF de centaines de pages et une terminologie
+          ultra-technique, y voir clair relève souvent du défi.
+        </p>
+        <p className="text-lg font-semibold text-navy-900 dark:text-white mt-4">
+          Legamapex est là pour simplifier tout ça.
         </p>
       </div>
 
-      {/* Main text */}
-      <div className="space-y-6 text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-14">
+      {/* Intro */}
+      <div className="space-y-5 text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-12">
         <p>
-          Je suis <strong className="text-navy-900 dark:text-white font-semibold">Norhane Boureghda</strong>,
-          étudiante en droit en master 2 de Droit du numérique, et j&apos;ai créé Legamapex pour répondre
-          à un besoin que j&apos;ai moi-même ressenti : avoir un espace clair, structuré et fiable pour
-          naviguer dans l&apos;écosystème réglementaire européen du numérique.
-        </p>
-        <p>
-          Le droit européen du numérique — DSA, DMA, AI Act, RGPD, NIS2 et les autres — est en train
-          de remodeler profondément les pratiques des entreprises, des plateformes et des professionnels
-          du droit. Ces textes sont publics, mais leur lecture reste difficile d&apos;accès pour qui n&apos;est
-          pas rompu à la rédaction législative européenne.
-        </p>
-        <p>
-          Legamapex est ma façon de prendre en main ces outils : construire une plateforme pédagogique
-          structurée, intégrer des technologies d&apos;IA pour enrichir l&apos;expérience, et contribuer à rendre
-          ce corpus juridique plus lisible pour les étudiants, les juristes et les professionnels concernés.
-        </p>
-        <p>
-          Ce projet est aussi une démonstration personnelle que les outils d&apos;intelligence artificielle
-          peuvent être mis au service d&apos;une pratique juridique rigoureuse — non pas pour remplacer le
-          raisonnement juridique, mais pour l&apos;amplifier.
+          La plateforme centralise les grandes réglementations européennes du numérique et les rend
+          accessibles. Que vous soyez étudiant en droit ou simplement concerné par les règles qui
+          encadrent votre quotidien numérique.
         </p>
       </div>
 
-      {/* Contents section */}
-      <div className="mb-14">
+      {/* Contents */}
+      <div className="mb-12">
         <h2 className="font-serif-display text-xl font-bold text-navy-950 dark:text-white mb-5">
-          Ce que contient le site
+          Ce que vous y trouverez
         </h2>
         <ul className="space-y-3">
-          {contents.map((item, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <div className="w-7 h-7 rounded-lg bg-navy-50 dark:bg-navy-900 border border-navy-100 dark:border-navy-800 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <item.icon className="w-3.5 h-3.5 text-navy-500 dark:text-navy-400" />
-              </div>
-              <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed pt-1">{item.label}</span>
+          {[
+            "15 règlements européens analysés et mis à jour",
+            "11 fiches thématiques sur les notions-clés",
+            "Un glossaire de 120 concepts définis et référencés par article",
+            "Un quiz interactif pour tester vos connaissances",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <span className="text-gold-500 font-bold flex-shrink-0 mt-0.5">→</span>
+              <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{item}</span>
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* IA note */}
+      <div className="mb-12 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+        <p>
+          Le droit du numérique bouge vite. Legamapex aussi — le site est construit avec des outils
+          d&apos;intelligence artificielle et pensé pour évoluer au rythme de son domaine.
+        </p>
+      </div>
+
+      {/* Who am I */}
+      <div className="mb-12">
+        <h2 className="font-serif-display text-xl font-bold text-navy-950 dark:text-white mb-4">
+          Qui suis-je ?
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+          Je suis <strong className="text-navy-900 dark:text-white font-semibold">Norhane Boureghda</strong>,
+          étudiante en M2 Droit du numérique à l&apos;Université Paris-Nanterre et alternante au Ministère
+          de la Justice. J&apos;ai créé Legamapex parce que j&apos;aurais aimé avoir cet outil quand j&apos;ai
+          découvert ces textes pour la première fois.
+        </p>
       </div>
 
       {/* Disclaimer */}
       <div className="flex gap-3 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-xl px-5 py-4">
         <AlertCircle className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-          Legamapex est un projet à visée pédagogique. Le contenu de ce site ne constitue pas un
-          avis juridique. Pour toute question spécifique, consultez un professionnel du droit.
+          Ce projet est à visée pédagogique. Le contenu de ce site ne constitue pas un avis juridique.
+          Pour toute question spécifique, consultez un professionnel du droit.
         </p>
       </div>
 
