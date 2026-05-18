@@ -28,7 +28,7 @@ const G = {
   cyber:       { bg: "#FFF7ED", border: "#F97316", text: "#C2410C", label: "Cybersécurité" },
   ia:          { bg: "#F0FDF4", border: "#22C55E", text: "#15803D", label: "Intelligence artificielle" },
   finance:     { bg: "#FFFBEB", border: "#F59E0B", text: "#92400E", label: "Finance & crypto" },
-  identite:    { bg: "#F8FAFC", border: "#94A3B8", text: "#475569", label: "Identité & droits num." },
+  identite:    { bg: "#F8FAFC", border: "#94A3B8", text: "#475569", label: "Identité & droits numériques" },
 };
 
 // ─── Custom nodes ─────────────────────────────────────────────────────────────
