@@ -27,7 +27,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none">
             <span className="text-white font-bold tracking-widest text-sm uppercase">Lega<span className="text-gold-400">mapex</span></span>
-            <span className="text-navy-400 text-[10px] tracking-widest uppercase font-medium">Droit du numérique européen</span>
+            <span className="text-navy-400 text-[10px] tracking-widest uppercase font-medium">Droit européen du numérique</span>
           </Link>
 
           {/* Desktop nav */}

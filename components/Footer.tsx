@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="mb-3">
               <div className="flex flex-col leading-none">
                 <span className="text-white font-bold tracking-widest text-sm uppercase">Lega<span className="text-gold-400">mapex</span></span>
-                <span className="text-navy-500 text-[10px] tracking-widest uppercase font-medium mt-0.5">Droit du numérique européen</span>
+                <span className="text-navy-500 text-[10px] tracking-widest uppercase font-medium mt-0.5">Droit européen du numérique</span>
               </div>
             </div>
             <p className="text-navy-400 text-sm">

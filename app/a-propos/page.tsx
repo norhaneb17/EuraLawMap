@@ -31,7 +31,7 @@ export default function AProposPage() {
           naviguer dans l&apos;écosystème réglementaire européen du numérique.
         </p>
         <p>
-          Le droit du numérique européen — DSA, DMA, AI Act, RGPD, NIS2 et les autres — est en train
+          Le droit européen du numérique — DSA, DMA, AI Act, RGPD, NIS2 et les autres — est en train
           de remodeler profondément les pratiques des entreprises, des plateformes et des professionnels
           du droit. Ces textes sont publics, mais leur lecture reste difficile d&apos;accès pour qui n&apos;est
           pas rompu à la rédaction législative européenne.
