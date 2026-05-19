@@ -22,14 +22,14 @@ const fichesData: Record<string, {
     title: "Le coordinateur des services numériques (CSN)",
     regulation: "DSA",
     difficulty: "L3",
-    tags: ["DSA", "Gouvernance", "ARCOM"],
+    tags: ["DSA", "Gouvernance", "Arcom"],
     intro:
-      "Le Règlement (UE) 2022/2065 sur les services numériques (DSA) crée une nouvelle architecture de gouvernance reposant sur des autorités nationales spécialisées : les coordinateurs pour les services numériques (CSN). En France, ce rôle est confié à l'ARCOM.",
+      "Le Règlement (UE) 2022/2065 sur les services numériques (DSA) crée une nouvelle architecture de gouvernance reposant sur des autorités nationales spécialisées : les coordinateurs pour les services numériques (CSN). En France, ce rôle est confié à l'Arcom.",
     sections: [
       {
         heading: "Qu'est-ce qu'un coordinateur pour les services numériques ?",
         content:
-          "Chaque État membre doit désigner une autorité compétente chargée de la mise en œuvre et de l'application du DSA sur son territoire. Cette autorité est le coordinateur pour les services numériques (CSN). Elle dispose de pouvoirs d'enquête, de surveillance et de sanction. En France, l'ARCOM (Autorité de Régulation de la Communication Audiovisuelle et Numérique) a été désignée par la loi du 21 mai 2024.",
+          "Chaque État membre doit désigner une autorité compétente chargée de la mise en œuvre et de l'application du DSA sur son territoire. Cette autorité est le coordinateur pour les services numériques (CSN). Elle dispose de pouvoirs d'enquête, de surveillance et de sanction. En France, l'Arcom (Autorité de Régulation de la Communication Audiovisuelle et Numérique) a été désignée par la loi du 21 mai 2024.",
       },
       {
         heading: "Missions du CSN",
@@ -54,7 +54,7 @@ const fichesData: Record<string, {
       { ref: "Article 61 DSA", texte: "Mécanisme de coopération entre CSN au sein du Comité européen des services numériques (CESN)." },
     ],
     exemple:
-      "En pratique : une plateforme de réseaux sociaux avec 10 millions d'utilisateurs en France mais établie aux Pays-Bas relève du CSN néerlandais (principe du pays d'origine). Si cette plateforme dépasse 45 millions d'utilisateurs dans l'UE, c'est la Commission européenne qui devient l'autorité principale, en coopération avec le CSN néerlandais. L'ARCOM peut néanmoins agir si des utilisateurs français sont affectés.",
+      "En pratique : une plateforme de réseaux sociaux avec 10 millions d'utilisateurs en France mais établie aux Pays-Bas relève du CSN néerlandais (principe du pays d'origine). Si cette plateforme dépasse 45 millions d'utilisateurs dans l'UE, c'est la Commission européenne qui devient l'autorité principale, en coopération avec le CSN néerlandais. L'Arcom peut néanmoins agir si des utilisateurs français sont affectés.",
     pieges: [
       "Ne pas confondre CSN et autorité de protection des données (CNIL) : la CNIL reste compétente pour le RGPD, le CSN pour le DSA.",
       "Le principe du pays d'origine signifie que c'est l'État d'établissement (siège social) qui détermine le CSN compétent, pas le pays où les utilisateurs se trouvent.",
@@ -62,7 +62,7 @@ const fichesData: Record<string, {
     ],
     aRetenir: [
       "Un CSN par État membre, désigné par la loi nationale.",
-      "En France : l'ARCOM est le CSN depuis mai 2024.",
+      "En France : l'Arcom est le CSN depuis mai 2024.",
       "Compétence basée sur le pays d'établissement (siège social du fournisseur).",
       "La Commission européenne supervise directement les très grandes plateformes (+45M utilisateurs UE).",
       "Sanctions : jusqu'à 6 % du CA mondial annuel.",

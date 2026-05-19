@@ -21,7 +21,7 @@ const features = [
   {
     icon: Trophy,
     title: "Quiz d'auto-évaluation",
-    desc: "Testez vos connaissances sur chaque règlement avec des quiz interactifs et des explications détaillées.",
+    desc: "Testez vos connaissances sur les textes européens avec un quiz interactif et des explications détaillées.",
     href: "/quiz",
     cta: "Commencer un quiz",
   },
@@ -50,7 +50,7 @@ export default function HomePage() {
               href="/reglements"
               className="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
             >
-              Explorer les règlements
+              Explorer les textes
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link

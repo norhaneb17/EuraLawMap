@@ -16,7 +16,8 @@ const catColors: Record<string, string> = {
   "IA": "bg-rose-50 text-rose-700 border-rose-200",
   "Finance": "bg-emerald-50 text-emerald-700 border-emerald-200",
   "Identité": "bg-indigo-50 text-indigo-700 border-indigo-200",
-  "Droits num.": "bg-orange-50 text-orange-700 border-orange-200",
+  "Prop. intell.": "bg-rose-50 text-rose-700 border-rose-200",
+  "ePrivacy": "bg-teal-50 text-teal-700 border-teal-200",
 };
 
 export default function RegulationCard({ regulation }: { regulation: RegulationData }) {

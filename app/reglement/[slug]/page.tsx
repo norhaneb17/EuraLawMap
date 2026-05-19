@@ -24,7 +24,7 @@ export default function RegulationPage({ params }: { params: { slug: string } })
             className="inline-flex items-center gap-1.5 text-navy-400 hover:text-white text-sm transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
-            Tous les règlements
+            Tous les textes
           </Link>
         </div>
       </div>

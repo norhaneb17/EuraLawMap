@@ -7,7 +7,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 export const metadata: Metadata = {
   title: "Legamapex — Droit européen du numérique",
   description:
-    "Cartographiez le droit européen du numérique : DSA, DMA, AI Act, RGPD, DGA et plus. Fiches, glossaire et assistant IA pour étudiants en droit.",
+    "Comprenez le droit européen du numérique : DSA, DMA, AI Act, RGPD, DGA et plus. Fiches de synthèse, glossaire et quiz pour étudiants en droit.",
 };
 
 export default function RootLayout({

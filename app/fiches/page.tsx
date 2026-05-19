@@ -9,7 +9,7 @@ const mockFiches = [
     slug: "dsa-coordinateur",
     title: "Le coordinateur des services numériques (CSN)",
     excerpt: "Rôle, désignation et pouvoirs des autorités nationales chargées de la mise en œuvre du DSA dans chaque État membre.",
-    tags: ["DSA", "Gouvernance", "ARCOM"],
+    tags: ["DSA", "Gouvernance", "Arcom"],
     regulation: "DSA",
     cat: "Plateformes",
   },

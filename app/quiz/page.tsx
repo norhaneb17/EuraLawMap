@@ -213,11 +213,16 @@ const mockQuiz = [
   },
   {
     id: "20",
-    question: "Selon le règlement P2B, quel préavis minimum une plateforme d'intermédiation doit-elle respecter avant de modifier ses conditions générales vis-à-vis des entreprises utilisatrices ?",
-    options: ["A. 7 jours", "B. 15 jours", "C. 30 jours", "D. 60 jours"],
+    question: "Quelle est la principale nouveauté introduite par eIDAS 2 par rapport à eIDAS 1 ?",
+    options: [
+      "A. La création d'une monnaie numérique européenne",
+      "B. La mise à disposition gratuite d'un portefeuille d'identité numérique européen (EUDIW) pour tous les citoyens de l'UE",
+      "C. L'obligation pour les entreprises de vérifier l'identité de leurs clients en ligne",
+      "D. La suppression des signatures électroniques qualifiées",
+    ],
     correct_answer: 1,
-    explanation: "L'article 3 du règlement P2B (Règlement (UE) 2019/1150) impose un préavis d'au moins 15 jours avant toute modification des conditions générales. Ce délai permet aux entreprises utilisatrices de s'adapter ou, le cas échéant, de résilier la relation commerciale avant l'entrée en vigueur des nouvelles conditions.",
-    regulation: "P2B",
+    explanation: "eIDAS 2 crée le portefeuille européen d'identité numérique (EUDIW — European Digital Identity Wallet), que chaque État membre doit fournir gratuitement à ses citoyens et résidents d'ici mai 2026. Il permet de s'identifier en ligne, stocker des attributs vérifiables (diplômes, permis) et signer électroniquement, avec divulgation sélective des données.",
+    regulation: "eIDAS 2",
   },
 ];
 
